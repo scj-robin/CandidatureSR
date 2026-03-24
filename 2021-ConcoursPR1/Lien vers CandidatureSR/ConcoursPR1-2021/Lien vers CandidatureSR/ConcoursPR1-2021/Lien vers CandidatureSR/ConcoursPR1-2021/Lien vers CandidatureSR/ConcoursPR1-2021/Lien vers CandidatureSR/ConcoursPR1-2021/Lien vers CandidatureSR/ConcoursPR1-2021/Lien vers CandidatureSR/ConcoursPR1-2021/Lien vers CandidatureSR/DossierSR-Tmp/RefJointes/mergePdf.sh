@@ -1,0 +1,1 @@
+pdftk RDRSS02-JCB.pdf PRLV05-BMCBioinfo.pdf LDM14-Bioinformatics.pdf DHK15-Environmetrics.pdf RBD07-CSDA.pdf DPR08-StatComp.pdf MRV10-AoAS.pdf CDR12-ElectronJStatis.pdf ClR14-StatComp.pdf GCR15-StatComp.pdf  SRS15-ArXiv.pdf MHR11-BookSystBiol.pdf MaR14-ESAIM-PS.pdf Rob15-MathSV.pdf cat output ../Rapport/ROBIN.publications.brut.pdf
