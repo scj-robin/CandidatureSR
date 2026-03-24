@@ -1,0 +1,68 @@
+\documentclass[a4paper]{report}
+\pdfoutput=1
+%\usepackage{hyperref}
+%\hypersetup{
+%pdfinfo={
+%Title={BayesianInferenceofGraphicalModelStructuresUsingTrees},
+%Author={L.Schwaller,S.Robin,M.Stumpf}
+%}
+%}
+\usepackage{pdfpages}
+\input{Commande.tex}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\title{\LARGE \bf Publications jointes au dossier de candidature au grade de DR1 de l'INRA}
+
+\author{{\Large {\sc Stéphane} ROBIN} \\
+  ~\\
+  UMR 518 \APT-INRA, Paris \\
+  ~\\
+  }
+
+\date{\today}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+
+\maketitle
+
+\bibliographystyle{plainnat}
+
+\tableofcontents
+
+\newpage
+\nocite{*}
+\SubBib{../Biblio/JointeInterface}{Publications d'interface statistique--biologie}
+
+\includepdf[pages=1-last]{../RefJointes/DHK15-Environmetrics.pdf}
+\includepdf[pages=1-last]{../RefJointes/LDM14-Bioinformatics.pdf}
+\includepdf[pages=1-last]{../RefJointes/PRLV05-BMCBioinfo.pdf}
+\includepdf[pages=1-last]{../RefJointes/RDRSS02-JCB.pdf}
+
+\newpage
+\nocite{*}
+\SubBib{../Biblio/JointeMethodo}{Publications méthodologiques en statistique}
+
+\includepdf[pages=1-last]{../RefJointes/CDR12-ElectronJStatis.pdf}
+\includepdf[pages=1-last]{../RefJointes/ClR14-StatComp.pdf}
+\includepdf[pages=1-last]{../RefJointes/DPR08-StatComp.pdf}
+\includepdf[pages=1-last]{../RefJointes/GCR15-StatComp.pdf}
+\includepdf[pages=1-last]{../RefJointes/MRV10-AoAS.pdf}
+\includepdf[pages=1-last]{../RefJointes/RBD07-CSDA.pdf}
+\includepdf[pages=1-last]{../RefJointes/SRS15-ArXiv.pdf}
+
+\newpage
+% \chapter{Revue et diffusion}
+
+\nocite{*}
+\SubBib{../Biblio/JointeDiffusion}{Publications de revue et diffusion}
+
+\includepdf[pages=1-last]{../RefJointes/MHR11-BookSystBiol.pdf}
+\includepdf[pages=1-last]{../RefJointes/MaR14-ESAIM-PS.pdf}
+\includepdf[pages=1-last]{../RefJointes/Rob15-MathSV.pdf}
+
+\end{document}

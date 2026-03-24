@@ -1,0 +1,23 @@
+\newcommand{\coeftri}{0.866}
+\newcommand{\coefobs}{2.5}
+\newcommand{\coefhid}{.75}
+
+  \begin{tikzpicture}
+  \node[hidden] (Hi) at (-.5*\coefhid*\heu, \coeftri*\coefhid*\veu) {\footnotesize $Z_i$};
+  \node[hidden] (Hj) at (\coefhid*\heu, 0) {\footnotesize $Z_j$};
+  \node[hidden] (Hk) at (-.5*\coefhid*\heu, -\coeftri*\coefhid*\veu) {\footnotesize $Z_k$};
+  
+  \node[observed] (Oij) at (.25*\coefobs*\heu, .5*\coeftri*\coefobs*\veu) {\footnotesize $Y_{ij}$};
+  \node[observed] (Oik) at (-.5*\coefobs*\heu, 0) {\footnotesize $Y_{ik}$};
+  \node[observed] (Ojk) at (.25*\coefobs*\heu, -.5*\coeftri*\coefobs*\veu) {\footnotesize $Y_{jk}$};
+  
+  \draw[arrow] (Hi) to (Oij);   \draw[arrow] (Hj) to (Oij);   
+  \draw[arrow] (Hi) to (Oik);   \draw[arrow] (Hk) to (Oik);   
+  \draw[arrow] (Hj) to (Ojk);   \draw[arrow] (Hk) to (Ojk);   
+
+  \draw[edge, dashed] (Hi) to (Hj);   
+  \draw[edge, dashed] (Hi) to (Hk);   
+  \draw[edge, dashed] (Hj) to (Hk);   
+
+  \end{tikzpicture}
+

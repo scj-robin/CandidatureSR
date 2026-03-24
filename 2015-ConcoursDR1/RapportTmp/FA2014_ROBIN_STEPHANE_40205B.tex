@@ -1,0 +1,149 @@
+\documentclass[10pt, a4paper, french]{article}
+
+% Biblio 
+\usepackage{/home/robin/LATEX/Biblio/multibib-old} 
+% \usepackage{/home/robin/LATEX/Biblio/astats-fr} 
+
+% Texte et mise en forme
+\usepackage{amsmath}
+\usepackage[T1]{fontenc}
+\usepackage[french]{babel}
+\usepackage{enumerate}
+\usepackage{eurosym}
+\usepackage{epsfig}
+\usepackage{url}
+\usepackage{color}
+\usepackage{cmbright}
+
+% Mise en page, marges
+\textwidth 17cm
+\textheight 25.5cm 
+\topmargin -2 cm 
+\oddsidemargin -0.5 cm
+\evensidemargin -0.5 cm
+
+\newcommand{\bcite}[1]{\cite{#1}}
+\newcommand{\mbplain}{/home/robin/LATEX/Biblio/multibib/mbplain}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+
+\newbibliographyGENE{Publi}
+\newbibliographyGENE{Tech} 
+\newbibliographyGENE{Chap}
+\newbibliographyGENE{Util} 
+\newbibliographyGENE{Vulg} 
+\newbibliographyGENE{InvNat} 
+\newbibliographyGENE{InvInternat} 
+\newbibliographyGENE{Poly} 
+\newbibliographyGENE{Anim} 
+
+\noindent
+\begin{tabular}{|p{.34\textwidth}|p{.615\textwidth}|}
+  \hline
+  \begin{tabular}{p{.3\textwidth}}
+  \includegraphics[width=.3\textwidth]{LogoINRA-Couleur} 
+  \end{tabular}
+  &
+  \begin{tabular}{p{.65\textwidth}}
+    \\
+    {\bf \large Fiche d'Activité chercheurs 2014} \\
+    ~\\
+    {\bf CSS~:} MIA \\~
+  \end{tabular} \\
+  \hline
+\end{tabular}
+
+\bigskip\noindent
+\begin{tabular}{|p{.31\textwidth}|p{.31\textwidth}|p{.31\textwidth}|}
+  \hline
+  {\bf Nom~:} ROBIN
+  &
+  {\bf Prénom~:} Stéphane
+  &
+  {\bf \^Age~:} 48 ans
+  \\
+  \hline
+\end{tabular}
+
+\bigskip\noindent
+\begin{tabular}{|p{0.98\textwidth}|}
+  \hline
+  {\bf Disciplines~:} \\ 
+  ~ \\
+  {\bf Discipline principale~:} \\ 
+  \qquad Mathématiques $>$ Probabilités et statistique
+  {\bf Disciplines secondaires~:} \\ 
+  \hline
+\end{tabular}
+
+\bigskip\noindent
+\begin{tabular}{|p{0.98\textwidth}|}
+  \hline
+  {\bf Type d'évaluation~:} Approfondie \hspace{0.2\textwidth} {\bf Évaluation précédente~:} 2012 Allégée \\ \hline
+  {\bf Demande de validation de périodes d'exercice de la recherche réalisées avant recrutement à l'Inra~:} non \\ \hline
+  {\bf Candidature avancement CR1~:} non \\ \hline
+  {\bf Candidature avancement DRE~:} non \\ \hline
+  {\bf Demande de renouvellement de mise à disposition~:} non \\ \hline
+  {\bf Demande d'intégration en CR ou DR~:} non \\ \hline
+\end{tabular}
+
+\bigskip\noindent
+\begin{tabular}{|p{0.175\textwidth}|p{0.175\textwidth}||p{0.175\textwidth}|p{0.175\textwidth}|p{0.175\textwidth}|}
+  \hline
+  \multicolumn{2}{|c||}{\bf CARRI\`ERE INRA} & \multicolumn{3}{c|}{\bf MOBILIT\'ES} \\ \hline
+  Date & Corps-Grade & Date & Unité & Centre \\ \hline
+  2008-02-01 & DR2 & 1999-01-01 $\rightarrow$ 2000-31-12 
+  & Mathématiques et Informatique Appliquées / Mathématique Informatique et Génome 
+  & Jouy-en-Josas / Versailles-Grignon \\ \hline 
+\end{tabular}
+
+\bigskip\noindent
+\begin{tabular}{|p{0.98\textwidth}|}
+  \hline
+  {\bf Taux d'activité~:} 100\% \\ \hline
+  {\bf Congé longue durée~:} aucun \\ \hline
+  {\bf Missions longue durée, post-doc, formations~:} aucun \\ \hline
+\end{tabular}
+
+\bigskip\noindent
+\begin{tabular}{|p{0.98\textwidth}|}
+  \hline
+  {\bf Séjours à l'étranger~:} Quelques séjours courts décrits à la section \ref{Subsec:SemInter} \\ \hline
+\end{tabular}
+
+\bigskip\noindent
+\begin{tabular}{|p{0.98\textwidth}|}
+  \hline
+  {\bf Autres informations que vous souhaitez transmettre à la CSS~:} % \\ 
+  Avant d'être recruté à l'INRA en 2008 j'ai mené une carrière d'enseignant-chercheur à AgroParisTech où je suis devenu professeur en 2003. \\ \hline
+\end{tabular}
+
+% La fiche d'activité (FA) doit donner une image complète mais synthétique de vos activités et des résultats qui leur sont associés : il s'agit de la liste des faits observables. Avant de la rédiger, nous vous recommandons de prendre connaissance des critères d'évaluation des chercheurs à l'Inra et des conseils pratiques.
+% 
+% Dans le cadre d'une évaluation approfondie, cette fiche est complétée par le rapport d'activité (RA). Ce rapport apporte des éléments qui contribuent à l'évaluation qualitative : intention initiale, analyse de la dynamique des activités depuis la dernière évaluation, collaborations et réseaux, perspectives, impact, difficultés rencontrées, etc. 
+% 
+% Attention à bien éviter la redondance des 2 documents (FA et RA) dans le cadre de l'évaluation approfondie.
+% 
+% Afin de faciliter la lecture du document final, nous vous recommandons de supprimer les « conseils » formulés dans chaque rubrique et d'adopter un mode rédactionnel synthétique et structuré. 
+
+
+%\newpage 
+\input{FA-Profil.tex}
+%\newpage 
+\input{FA-Resultats.tex}
+%\newpage 
+\input{FA-Publications.tex}
+%\newpage 
+\input{FA-Synthese.tex}
+%\newpage 
+\input{FA-Organigramme.tex}
+%\newpage 
+\input{FA-Observations.tex}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\end{document}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

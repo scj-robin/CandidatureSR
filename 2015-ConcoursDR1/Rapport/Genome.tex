@@ -1,0 +1,34 @@
+%=============================================================
+\subsection{Statistique des séquences biologiques \label{subsec:genome}}
+
+\paragraph{Motifs génomiques.} 
+\Col{J.J. Daudin, F. Rodolphe, M.-F. Sagot, S. Schbath, V. Stefanov.}
+Au tournant des années 1990-2000, un enjeu important de la biologie moléculaire était l'analyse et la compréhension des génomes que le séquençage systématique commençait à rendre disponibles à un rythme accéléré. Le développement d'outils statistiques utiles à ces analyses a motivé la création du groupe SSB (Statistique des séquences biologiques dont je reparlerai en section \ref{subsec:GT}) que j'ai rejoint quelques temps après sa création.
+
+Mes premiers travaux sur ce thème ont porté sur les statistiques de motifs. Les motifs se définissent comme de courtes séquences fonctionnelles qui se caractérisent, le plus souvent, par une fréquence ou une répartition inattendue ou atypique le long du génome. Dans ce type d'approche, la fonction du statisticien est précisément de définir ce que serait l'attendu pour pouvoir décider ensuite si l'observation en est proche ou, au contraire, s'en distingue. Pour ce problème, on peut définir l'attendu dans le cadre d'un modèle statistique complètement explicite. Un tel modèle, souvent appelé modèle ``nul'', a pour objet de servir de référence et son caractère explicite permet de bien exposer les hypothèses, forcément simplificatrices, sur lesquelles il repose.  Le choix d'un tel modèle est typique de la modélisation statistique~: il convient de proposer un modèle suffisamment réaliste pour que l'observation ne s'en écarte pas systématiquement, tout en restant mathématiquement gérable. Les chaînes de Markov et leurs avatars constituent un bon exemple de ce type de modèle dans la mesure où elles sont mathématiquement bien maîtrisées et permettent par exemple de prendre en compte la composition en (mono-, di-, tri-, ...)nucléotides de la séquence, son caractère périodique, voire son hétérogénéité.
+
+Dans le cadre de ce modèle, on peut ainsi établir une série de résultats sur la distribution exacte du nombre d'occurrences (et des distance qui les séparent) d'un motif simple \cite{RoD99} et de plusieurs motifs simples \cite{RoD01}. Une des difficultés techniques de ce travail provient de la possibilité pour les occurrences de différents motifs de se recouvrir entre elles. Ainsi, même en l'absence de toute fonction biologique, un motif ``recouvrant'' aura une répartition plus agrégée (i.e. moins uniforme) le long de la séquence qu'un motif ``non recouvrant''.
+
+Les résultats sur les distances permettent de s'intéresser à la détection de régions génomiques particulièrement riches en occurrences d'un motif donné \cite{Rob02,LeR05}. Un motif emblématique de ces recherches est le motif CHI, connu chez plusieurs bactéries et exerçant une fonction de protection du génome contre l'action de dégradation d'une enzyme de restriction. Dans le cas de {\sl B. subtilis}, on observe notamment une surabondance de ce motif aux abords de l'origine de réplication. Ces travaux ont constitué le sujet de mon mémoire de HdR \cite{Rob02-HdR} ainsi que du livre {\sl DNA, words and models} \cite{RRS06} (\cite{RRS03} pour la version française). 
+
+Dans ce type de recherche, il est évidemment rare que les premiers résultats permettent de répondre directement aux questions précises que les biologistes se posent. Ainsi les sites de fixation de facteurs de transcriptions qui sont constitués de plusieurs sous-motifs espacés de distances relativement fixes n'entrent pas dans ce cadre. On peut cependant obtenir des résultats du même type que pour des motifs simples, au prix de développements plus techniques \cite{RDR02,SRS07,SRS11}. 
+%
+De même, si les statistiques de motifs classiques ont permis une meilleure compréhension de l'organisation de certains génomes bactériens \cite{MPS08,HCS07}, il est rapidement apparu nécessaire de pouvoir comparer l'exceptionnalité d'un motif entre différentes régions du génome afin d'identifier précisément des contrastes dans sa répartition \cite{RSV07}.
+%
+Ces travaux ont également donné lieu à une application plus inattendue en éthologie animale dans lesquels ils ont permis de caractériser des chants de canaris \cite{LAR08}.
+
+\paragraph{Motifs dans les réseaux.} 
+\Col{voir section \ref{subsec:reseau}.}
+Plusieurs années plus tard, il est apparu que les réseaux biologiques (réseaux de régulation, réseaux d'interactions protéine-protéine, ...)  pouvaient à leur tour être analysés en termes de structures locales. De telles structures sont en fait l'analogue pour un graphe des motifs étudiés jusque là dans des séquences. Les articles \cite{PDK08,MSB06} généralisent les techniques décrites ci-dessus au cas de réseau. 
+
+\nocite{RoS01}
+\nocite{ScR09}
+\nocite{BDM02}
+% RoS01, Numerical comparison of several approximations of the word
+% count distribution in random sequences \\ 
+% ScR09 How pattern statistics can be useful for {DNA} motif discovery?
+% BDM02, Back to the local score in the logarithmic case: a direct and
+% simple proof\\
+
+
+

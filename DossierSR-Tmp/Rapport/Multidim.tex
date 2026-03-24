@@ -1,0 +1,25 @@
+%=============================================================
+\subsection{Analyses multidimensionnelles \label{subsec:multidim}}
+
+\Col{C. Baril, A. Bar-Hen, J. Chiquet, H. Höfte, T. Mary-Huard, F. Mortier, G. Mouille, G. Nuel.}
+
+Avant d'être confrontés à la grande dimension, les biologistes ont longtemps fréquenté les données multivariées. De telles données vont d'une série de phénotypes mesurés simultanément sur chaque individu, à des spectres rendant compte de la composition d'un tissu, en passant par une série de marqueurs moléculaires (RFLP, AFLP, etc.). Parallèlement à mes premières recherches liées à la génomique, je me suis intéressé à l'analyse de différentes données de ce type.
+
+La thèse de F. Mortier portait sur la prédiction conjointe d'une série de variables phénotypiques à partir de données moléculaires. Ce travail avait pour objet d'optimiser des dispositifs de distinction variétale. Dans de tels dispositifs, il convient de cultiver dans des parcelles proches les variétés dont on s'attend à ce qu'elles présentent des phénotypes similaires afin de mieux les comparer \cite{NRB01,NBR01,MRL03}. Il était donc utile de prédire cette similarité en se fondant sur des données moléculaires déjà disponibles.
+%
+De façon parallèle, je me suis intéressé à la comparaison de spectres infrarouges dans le but de caractériser et de comparer la composition de la paroi cellulaire chez une série de mutants d'{\sl A. thaliana} \cite{RLH03,MRL05}.
+%
+% Tout comme pour mes premiers travaux sur les microarrays présentés à la section \ref{subsec:microarray}, ces contributions ont largement profité de mon activité d'enseignant qui m'amenait à connaître toute une gamme d'analyses multivariées classiques. Ainsi, \cite{MaR09} se fonde sur une combinaison de classification hiérarchique et d'analyse en composantes principales, orientée vers une tâche de classification. 
+
+Les techniques utilisées relevaient de variations autour du modèle linéaire (multivarié, généralisé) et se situaient typiquement dans le cadre agréable où le nombre d'individus excède à la fois le nombre de variables prédictrices (i.e. marqueurs) et le nombre de réponses (i.e. phénotypes). Dans le cas des spectres, une étape de réduction de dimension était d'ailleurs nécessaire pour satisfaire cette condition. 
+%
+Cette condition n'est évidemment plus de mise avec les données de grandes dimensions, et des approches dites pénalisées (comme la régression Ridge, le Lasso et leurs nombreux avatars) permettent de revisiter toute une série de problèmes sans hypothèse sur les dimensions relatives des données. Ainsi \cite{CMR14}, qui emprunte aux techniques modernes d'apprentissage statistique, peut être vu comme une suite des travaux présentés plus haut.
+
+\nocite{MRD07}
+% \SR{}{\paragraph{Apprentissage.} ~\\
+% MRD07, A penalized criterion for variable selection in classification,  \\
+% }
+
+
+
+

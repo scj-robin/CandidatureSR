@@ -1,0 +1,89 @@
+\newcommand{\Esp}{\mathbb{E}}
+\newcommand{\Ncal}{\mathcal{N}}
+\newcommand{\Pcal}{\mathcal{P}}
+\newcommand{\Qcal}{\mathcal{Q}}
+
+Dans bon nombre d'applications, et notamment en sciences du vivant, les données observées ne sont que le reflet d'un processus plus profond qui n'est pas directement accessible. Ce processus sous-jacent induit généralement une structure particulière des observations dont il convient de tirer parti pour espérer remonter jusqu'au phénomène caché. Les modèles à variables latentes ou modèles à données incomplètes constituent une façon naturelle de décrire ce genre de situation. 
+
+Du fait de la variété de leurs applications et de la richesse des problèmes statistiques qu'ils posent, je me suis spécialisé dans ces modèles depuis plusieurs années.
+Ces modèles et les techniques d'inférence que je résume ci-dessous sont l'objet du cours que je donne au master de Mathématiques pour les sciences du vivant de l'université Paris-Saclay \citej{Rob15-MHS}.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\paragraph{Algorithmes EM et VEM.}
+La vaste classe des modèles à structure latente comprend notamment les modèles de mélange, les chaînes de Markov cachées (HMM) très populaires en bioinformatique mais aussi des modèles plus complexes comme les chaînes de Markov cachées couplées ou le modèle à blocs stochastiques dédié aux réseaux d'interactions. La figure \ref{Fig:ModeleGraphique} donne une représentation de ces différents modèles sous forme de modèle graphique. La complexité de ces différents graphes annonce celle de l'inférence des modèles associés \cite{PCG19}. 
+
+Dans un cadre fréquentiste, l'approche la plus populaire pour mener à bien l'inférence d'un tel modèle repose sur l'algorithme EM (espérance-maximisation). En notant $Y$ les données observées, $Z$ les variables latentes et $\theta$ les paramètres à estimer, cet algorithme alterne une étape E d'évaluation (de certains moments) de la loi conditionnelle $p_\theta(Z | Y)$ (à paramètre $\theta$ fixé) et une étape M de mise à jour du paramètre par maximisation de la quantité $\Esp[\log p_\theta(Y, Z)]$ par rapport à $\theta$. 
+
+Pour bon nombre de modèles, l'étape E est l'étape critique car la loi conditionnelle $p_\theta(Z | Y)$ n'est souvent pas explicite. Ainsi, cette étape est triviale pour les modèles de mélange mais requiert des calculs de récurrence plus ou moins sophistiqués pour les modèles de chaînes de Markov cachées ('{\sl forward-backward}') ou les modèles d'évolution sur arbre ('{\sl upward-downward}' et, plus généralement '{\sl belief propagation}'). Dans certains cas, cette distribution conditionnelle est inaccessible et l'étape E est alors remplacée soit par une étape d'échantillonnage, soit par une étape d'approximation.
+
+\bigskip
+Depuis mes premiers travaux sur le modèle à blocs stochastiques (voir section \ref{sec:reseaux}), je me suis spécialisé dans des techniques d'approximations dites variationnelles qui visent à rechercher une distribution $q(Z)$ approchant $p_\theta(Z | Y)$ au sein d'une classe restreinte de distributions, notée $\Qcal$. Cette recherche s'opère par la minimisation d'une mesure de divergence $D$, l'approximation optimale étant définie comme 
+$$
+q^* = \arg\min_{q \in \Qcal} D[q || p_\theta(\cdot | Y)].
+$$
+La divergence la plus fréquemment employée est la divergence de K\"ullback-Leibler $KL[q || p_\theta(\cdot | Y)]$ et la qualité de l'approximation variationnelle repose alors essentiellement sur le choix de la classe $\Qcal$. L'algorithme résultant est appelé EM variationnel (VEM).
+
+Ces techniques peuvent s'étendre à l'inférence bayésienne pour approcher la loi {\sl a posteriori} $p(\theta | Y)$ (on parle alors de bayésien variationnel : VB), voire, en présence de variables latentes, la loi conditionnelle jointe $p(\theta, Z | Y)$. Dans ce dernier cas, la classe de distribution $\Qcal$ est typiquement choisie factorisable, c'est-à-dire constituée des distributions de la forme $q(\theta, Z) = q_1(\theta) q_2(Z)$. L'algorithme résultant est appelé EM bayésien variationnel (VBEM).
+
+\begin{figure}[ht]
+  \hspace{-.05\textwidth}
+  \begin{tabular}{cc}
+    a~: Modèle de mélange & b~: Modèle de Markov caché \\
+    \begin{tabular}{c}
+	 \input{../Figures/FigMixture.tex}
+    \end{tabular}
+    &
+    \begin{tabular}{c}
+	 \input{../Figures/FigHMM.tex}
+    \end{tabular} \\ 
+    ~ \\
+    c~: Modèle à blocs stochastiques & d~: Modèle de Markov caché couplé \\
+    \begin{tabular}{c} \\
+	 \input{../Figures/FigSBM.tex}
+    \end{tabular}
+    &
+    \begin{tabular}{c}
+	 \input{../Figures/FigCoupledHMM.tex}
+    \end{tabular} 
+  \end{tabular}
+  \caption{Exemples de modèles graphiques incluant des variables cachées. Les variables observées sont notées $Y$ et les variables cachées $Z$. Les traits pleins et les flèches indiquent les dépendances conditionnelles. Les liens pointillés indiquent les dépendances entre variables cachées conditionnellement aux variables observées. \label{Fig:ModeleGraphique}}
+\end{figure}
+
+\bigskip
+Une des limitations principales des méthodes variationnelles est que le passage par l'approximation de la loi conditionnelle $p_\theta(Z | Y)$ fait perdre les garanties statistiques du maximum de vraisemblance pour le paramètre $\theta$. Si l'analyse théorique des estimateurs variationnels peut être faite pour quelques modèles spécifiques, il n'existe pas de théorie générale concernant leurs propriétés statistiques (consistance, normalité asymptotique, ...) et l'immense majorité de la littérature se fonde sur des études de simulation pour s'assurer de leurs vertus.
+
+Plusieurs de mes travaux en cours visent à combiner des méthodes variationnelles (computationnellement très efficaces) avec des méthodes d'inférence plus classiques, plus gourmandes en calcul, mais assorties de garanties théoriques. J'envisage actuellement deux pistes principales: le recours à des vraisemblances composites dans le cadre fréquentiste et l'accélération d'algorithmes d'échantillonnage de type Monte-Carlo dans le cadre bayésien.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\paragraph{Modèles de mélanges et de Markov cachés.}
+\Col{C. Bérard, A. Cleynen, P. Delmar, J.-J. Daudin, E. Gassiat, E. Lebarbier, M.-M. Martin-Magniette, M. Mary-Huard, S. Volant, X. Wang}
+Les modèles de mélange et les modèles de Markov cachés sont extrêmement populaires, notamment en génomique. Leur inférence ne posant pas de problème particulier, leurs performances reposent souvent sur le choix des lois d'émission (i.e. des distributions conditionnelles $p_\theta(Y | Z)$) qui doivent être adaptées au mieux au problème étudié. P. Delmar les a utilisés pour modéliser des différences de variances dans des données d'expression de gènes \cite{DRD05, DRL05} et C. Bérard pour déterminer des sites de fixation d'une protéine particulière le long du génome \cite{MMB08, RAB11}. On peut également reformuler le problème des tests multiples sous forme d'un mélange à deux classes dans lequel une des lois d'émission est connue, ce qui permet de relâcher toute contrainte de forme sur l'autre loi \cite{RBD07, GRC09}. 
+
+Les données génomiques étant fréquemment recueillies le long du génome, les modèles de Markov cachés constituent une extension naturelle des modèles de mélange en ce qu'ils permettent de prendre en compte cette structure longitudinale. C. Bérard a ainsi  proposé un modèle générique d'annotation de régions transcrites chez {\sl A. thaliana}
+\cite{BMB11, RAB11}, de même ces modèles permettent de décrire finement le paysage transcriptionnel de la levure au sein même d'un gène \cite{NLR09}.
+
+\bigskip 
+Si une modélisation fine de la loi d'émission permet d'améliorer les performances de classification d'un HMM, elle repose sur une connaissance et une compréhension du phénomène qui ne sont pas toujours disponibles {\sl a priori}. On peut alors souhaiter recourir à des lois d'émission les plus flexibles possibles. Si une flexibilité totale n'est pas envisageable dans le cas d'un modèle de mélange pour des raisons d'identifiabilité, il apparaît que la dépendance entre les observations induite par un modèle de Markov caché autorise au contraire une liberté absolue et que le modèle sera identifiable pour peu que les lois d'émission dans les différents états ne soient simplement pas linéairement dépendantes, ce qui ouvre la possibilité d'utiliser des lois d'émission non-paramétriques \citej{GCR16}. 
+
+Ce résultat me semble d'une assez grande portée dans la mesure où il ouvre tout un spectre de modélisations possibles. On peut ainsi envisager un modèle dans lequel les lois d'émission sont elles-mêmes des lois de mélange et définir un algorithme EM pour en faire l'inférence \cite{VBM13}. La preuve de ce résultat d'identifiabilité suggère d'autre part des stratégies d'inférence alternatives à EM, fondées par exemple sur une vraisemblance composite. Les quelques pistes évoquées dans \cite{GCR16} sont, à mon sens, loin d'épuiser les applications possibles de ce résultat.
+
+\bigskip
+Si les versions simples des modèles de Markov cachés ne posent pas de problème d'inférence majeur, des versions à peine plus sophistiquées peuvent amener des problèmes notoirement plus complexes. Le recours à un algorithme VEM peut par exemple s'avérer nécessaire pour traiter des chaînes de Markov couplées, sauf à devoir considérer un nombre exponentiellement croissant d'états cachés (cf \cite{WLA19} et figure \ref{Fig:ModeleGraphique}d). 
+
+De même, la thèse de S. Volant portait sur l'agrégation de modèles pour laquelle le cadre bayésien est particulièrement confortable. L'inférence bayésienne d'un modèle de mélange ou d'une chaîne de Markov cachée ne peut cependant pas se faire au moyen de formules exactes, même en recourant à des lois conjuguées. Les travaux de S. Volant reposent en bonne partie sur une approximation variationnelle et des algorithmes VBEM \cite{VMR12}.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\paragraph{Modèle Poisson log-normal.}
+\Col{J. Chiquet, M. Mariadassou}
+L'écologie des communautés s'intéresse notamment à l'étude des variations d'abondance des différentes espèces cohabitant dans un même site. Ces analyses se font pour la plupart au moyen de modèles dits de distributions jointes d'espèces (JSDM). Ces modèles ont notamment pour objectif de distinguer entre les effets environnementaux (dits abiotiques) des interactions entre espèces (dites biotiques).
+
+Le modèle Poisson log-normal, proposé au début des années 80, est un modèle linéaire généralisé mixte qui permet cette modélisation jointe. En notant $n$ le nombre de sites et $p$ le nombre d'espèces, le modèle suppose les sites indépendants et associe à chacun d'eux un vecteur latent $Z_i$ gaussien $\Ncal_p(0, \Sigma)$. Les abondances des différentes espèces dans les différents sites $(Y_{ij})_{1 \leq i \leq n, 1 \leq j \leq p}$ sont supposées conditionnellement indépendantes et distribuées selon une loi de Poisson: $Y_{ij} \sim \Pcal(\exp(x_i^\intercal \beta_j + Z_{ij}))$ où $x_i$ est un vecteur de descripteurs environnementaux du site $i$. Le paramètre de ce modèle est donc $\theta = (\beta, \Sigma)$: les coefficients de régression $\beta$ décrivent les effets abiotiques et la matrice de variance $\Sigma$ les interactions biotiques.
+
+\bigskip
+L'inférence de ce modèle assez simple n'est pas immédiate du fait que les distributions conditionnelles $p_\theta(Z_i | Y_i)$ ne sont pas formellement calculables. Un algorithme VEM peut être conçu en approchant chacune de ces distributions par une loi normale. On peut alors montrer que les deux étapes de l'algorithme correspondent à des problèmes d'optimisation convexe, qu'on sait résoudre efficacement. Un des intérêts principaux de ce modèle est que le recours à une variable latente gaussienne permet d'en décliner un grand nombre d'avatars permettant d'effectuer, par exemple, une réduction de dimension par analyse en composantes principales probabiliste \cite{CMR18a} ou une inférence de réseau par {\sl graphical lasso} \cite{CMR19}. 
+
+Si elle ne complique pas vraiment le modèle, la prise en compte de covariables environnementales (au moyen d'un modèle paramétrique explicite) change drastiquement les résultats et leur interprétation écologique. Elle permet aux écologues de corriger des effets bien connus et de distinguer les interactions 'directes' entre espèces, de simples associations statistiques résultant de fluctuations environnementales. Ces travaux ont déjà donné lieu à plusieurs collaborations avec des collègues écologues: \cite{MMR19}, \cite{PFC20}, \cite{LCA20} et \citej{FHC20}. Ce succès repose en grande partie sur le développement très abouti du package R {\tt PLNmodels} \citej{CMR20}, qui a grandement bénéficié du talent de mes co-auteurs.
+
+% * JSDM : \cite{CMR20}, \cite{CMR19}, \cite{CMR18a}
+% * JSDM - appli : \cite{MMR19}, \cite{PFC20}, \cite{LCA20}, \cite{FHC20}
+

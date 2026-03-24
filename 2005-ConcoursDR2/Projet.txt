@@ -1,0 +1,73 @@
+  Projet   
+
+ Insertion au sein de l'INRA  
+
+Comme le montre mon mémoire, tout au long de ma carrière, j'ai effectué mes recherches dans des unités mixtes (UMR INA PG / ENGREF / INRA) ou propres (INRA MIG) de l'INRA. Je suis attaché à cet institut et aux recherches qui s'y mènent, notamment dans le domaine des mathématiques appliquées à la biologie, au sein du département MIA. Les progrès récents de la biologie fondamentale (génomique, post-génomique, biologie intégrative) montrent clairement un besoin croissant de méthodes d'analyse et de modélisation: ce besoin est dû à l'abondance des données générées par les technologies les plus récentes (notamment issues de la biologie moléculaire), et à la complexité des objet biologiques étudiés (cellule, organisme, population). 
+
+ Département Mathématiques et Informatique Appliquées et UMR 
+
+Il me semble donc essentiel pour l'INRA de compter parmi ces membres des chercheurs en mathématiques et informatique solidement implantés dans leur discipline. Cette forte compétence disciplinaire constitue une garantie pour l'avenir: personnes ne sait aujourd'hui la forme que prendront les données biologiques de demain, mais il est clair que leur description, leur modélisation, leur traitement et leur analyse feront appel à des outils issus des disciplines du département MIA. L'association de la statistique et de l'agronomie est une tradition ancienne qui doit être entretenue et développée au profit des autres domaines de la biologie. 
+
+De plus, le large spectre des possibles demande de maintenir une compétence disciplinaire large. Les obligations d'enseignement des enseignants-chercheurs les oblige à entretenir une culture aussi complète que possible dans leur domaine, sous peine de délivrer des enseignements obsolètes. Cette culture assure une bonne réactivité aux problèmes émergeant qui, dans un premier temps, trouvent souvent des solutions dans des méthodes existantes, au prix de quelques adaptations. L'implication de l'équipe ``Statistique et Génome'' dans l'analyse des biopuces en constitue une bonne illustration: nos premiers travaux dans ce champ étaient fondés sur la statistique la plus classique. L'association de l'INRA avec les établissement d'enseignements au travers des UMR me semble donc tout à fait profitable, l'INRA offrant aux établissements une structuration de leur recherche, parfois difficile et l'absence de masses critiques, et une visibilité nationale et internationale. 
+
+ UMR INA PG / ENGREF / INRA Subsec:UMR 
+
+En postulant au grade de directeur de recherche à l'INRA, mon projet se situe clairement au sein de l'UMR INA PG / ENGREF / INRA Mathématiques et Informatique Appliquées dont j'assure la direction depuis presqu'un an et demi. Scientifiquement, je me propose de poursuivre mes recherches au sein de l'équipe ``Statistique et Génome'' dont la dynamique me semble suffisamment prometteuse. Cette partie de mon projet est l'objet de la section suivante (Sec:ProjRech). 
+
+SRDirection de l'unité. Comme je l'ai mentionné dans mon mémoire, la direction de l'unité est pour moi une expérience nouvelle. Au delà des charges administratives, la définition d'un projet collectif et la mobilisation des énergies constituent des tâches difficiles, notamment dans le cadre d'un mi-temps. Il me semble cependant important de structurer la recherche en mathématiques et informatique dans ces deux grandes écoles que sont l'ENGREF et l'INA PG dont le rapprochement à moyen terme est très probable. Cette structuration a deux objectifs principaux:  Assurer la diffusion de méthodes modernes de modélisation mathématique et informatique en biologie; Attirer les élèves ingénieurs vers la recherche grâce à la présence du laboratoire au sein même des établissements.  
+
+SRAnimation autour de la modélisation mathématique en biologie. Les écoles comme l'INA PG et l'ENGREF sont, par nature, des lieux d'interdisciplinarité. Un des objectifs de la formation d'ingénieur est de permettre aux étudiants de mobiliser des savoirs et des notions issues de disciplines très diverses pour la résolution d'un problème donné. Les enseignants des différentes disciplines sont ainsi amenés à se fréquenter pour concevoir des enseignements intégrés d'écologie et de mathématiques, de génétique et de statistique, it etc. 
+
+L'UMR MIA peut donc se fixer comme objectif d'animer la réflexion autour de la modélisation mathématique en biologie au sein des départements des deux écoles et des UMR qui y sont associées. La forme de cette animation reste à définir. Un séminaire sur ce thème serait redondant avec d'autres séminaires existants et proches, comme ceux de l'École Normale Supérieure et celui de l'université Paris VII. Un fonctionnement en groupes de travail sur des sujets précis (modèle mixte et génétique quantitative, statistique spatiale et génétique des populations, tests multiples et données à haut débit etc.) serait sans doute plus efficace. Le groupe de travail sur la modélisation bayésienne du risque, initié à l'INA PG en collaboration avec l'unité Métarisk et l'unité MIA de Jouy, constitue certainement un bon exemple. 
+
+SRAnimation autour des méthodes statistiques pour les données post-génomiques. Enfin, dans le cadre de sa mission ``Modélisation'' le département MIA se propose de coordonner des réseaux thématiques associant l'ensemble de l'INRA. La réunion organisée en Avril en collaboration avec S. Huet à l'INA PG autour des données post-génomique s'inscrit dans cette optique. 
+
+Il s'agit ici de donner corps à la communauté française des statisticiens (des plus méthodologiques au plus appliquées) travaillant sur les données issues de toutes les technologies à haut débit. La forme choisie pour cette animation est celle d'un atelier/séminaire se réunissant une ou deux fois par an et réunissant  des conférences invités de chercheurs internationaux, des exposés scientifiques traditionnels, des exposés didactiques sur des sujets méthodologique particuliers.  Cette action pourrait trouver une prolongation dans la proposition de Ph. Besse (université P. Sabatier, Toulouse) de créer, au niveau national, un Groupe De Recherche (GDR) sur ce thème. 
+
+
+
+ UMR INA PG / ENGREF / INRA Mathématiques et Informatique Appliquées 
+
+SRÉquipe ``Statistique et Génome'' 
+
+SRUMR 
+
+ Département Mathématiques et Informatique Appliquées 
+
+SRAnimation et actions transversales 
+
+ Projet de recherche Sec:ProjRech  
+
+ D'autres statistiques de motifs 
+
+Les statistiques de motifs ne constituent pas un sujet de recherche nouveau mais il ne semble pas épuisé pour autant, et on peut identifier au moins quelques directions dans lesquelles le poursuivre pour répondre aux besoins sans cesse croissants d'analyses intensives (et donc automatiques) des données biologiques. 
+
+SRMotifs dans les séquences biologiques. Les premières directions constituent des extensions naturelles de résultats déjà obtenus sur les mots exceptionnels.  [Recherche de mots exceptionnels dans des chaînes Markov cachées.] Ce modèle constitue une extension du modèle de chaînes de Markov qui permet de prendre en compte l'hétérogénéité de composition de la séquence. Typiquement, le processus caché peut varier entre les deux états "g+c-riche" et "g+c-pauvre". Formellement, on peut réutiliser des résultats déjà disponibles sur la détection de mots de fréquence exceptionnelle puisqu'une chaîne de Markov cachée est une chaîne de Markov homogène. Cependant, cette chaîne de Markov est observée de façon incomplète (il manque les états cachés) et ces résultats demandent donc à être adaptés. Ce travail serait mené en collaboration avec S. Schbath (INRA-MIG). [Comparaison d'exceptionnalités.] La recherche des mots de fréquence exceptionnelle est maintenant utilisée dans de nombreuses études biologiques. La comparaison des résultats qu'elle produit pour différents génomes devient donc une question naturelle en génomique comparative. On peut se demander, par exemple, si un mot présente le même degré d'exceptionnalité dans deux séquences. Dans le cadre du projet MOSAIC (cf. annexe Subsec:Contrats), en collaboration avec S. Schbath, nous avons déjà exhibé quelques solutions simples (mais approximatives) qui semblent tout à fait accessibles. Curieusement, ce problème rejoint celui de l'analyse différentielle des données d'expression génique de type SAGE. [Comparaisons multiples et mots exceptionnels.] Enfin, la recherches de mots exceptionnels comporte intrinsèquement une dimension de tests multiples puisque les mots candidats se comptent, en général, par milliers ou dizaines de milliers. Ce problème n'a jamais été abordé dans la littérature et les compétences développées dans l'équipe à propos de l'analyse des biopuces devraient pouvoir être mises à profit pour le traiter.  
+
+SRMotifs dans des réseaux d'interactions biologiques. Les réseaux métaboliques, enzymatiques ou d'interaction protéiques sont devenus un objet d'étude central de la post-génomique. Les outils statistiques permettant leur analyse et leur compréhension demeurent assez sommaires. 
+
+Suite à une offre de collaboration de M.-F. Sagot (INRIA Hélix), un groupe de travail s'est constitué au sein du groupe SSB pour travailler sur la recherche de motifs sur-représentés dans des réseaux. Un motifs est ici défini comme une topologie locale particulière ce sujet: par exemple, les composés A et B produisent le composé C grâce à l'enzyme E. Apparemment proche des statistiques de motifs dans les séquences, cette question pause en fait des problèmes très différents, liés notamment à la théorie des graphes aléatoires. 
+
+ Méthodes statistiques pour l'analyse des biopuces 
+
+La reconnaissance de l'équipe ``Statistique et Génome'' de l'UMR 518 est fortement due aux méthodes statistiques dédiées aux biopuces qui y sont développées. Il est essentiel de conforter cette thématique qui contribue fortement à la cohérence de l'équipe. Ce renforcement passe par le développement de collaborations et de thématiques existantes, et par le développement de nouveaux axes. 
+
+SRConsultation et conseil. Les collaborations avec les laboratoires sont presque toujours initiées par une étape de consultation sur un problème simple. Cette activité proche du service est donc nécessaire pour établir des collaborations sur des thématiques plus originales. Il me semble donc nécessaire de maintenir des travaux de planification expérimentale, normalisation, analyse différentielle, etc. réguliers, sans pour autant devenir une équipe de service. 
+
+SRDéveloppements méthodologiques.  [Puces chromosomiques.] Ces puces sont de plus en plus utilisées dans différentes plates-formes avec lesquelles nous collaborons (Institut Curie, URGV, etc.) et les outils statistiques spécifiques sont encore assez pauvre. Les compétences acquises dans l'équipe sur la normalisation, la segmentation, la classification doivent permettre de maintenir cette thématique active, même après le départ de F. Picard (doctorant travaillant sur ce sujet). [Analyse différentielle.] Les problèmes de tests multiples évoqués dans mon mémoire constitue un champ statistique très actif en ce moment. Notre premier résultat vraiment satisfaisant sur le sujet est récent, et je compte poursuivre dans cette voie en tentant de les généraliser au cas de données dépendantes, avec comme objectif l'application de ces méthodes aux puces chromosomiques. [Classification de cinétiques.] Les expériences de cinétiques sont parmi les plus fréquentes en analyse du transcriptome Les approche usuelles sont fondées sur des méthodes automatiques qui ne prennent pas en compte la variabilité de la mesure. Les modèle de mélange de courbes semblent une piste prometteuse (et peu risquée) faisant appel à des compétences de modélisation et de sélection de modèle présentent dans l'équipe.  
+
+ Apprentissage statistique 
+
+L'apparition de technologie d'investigation biologique générant des données en masse rencontre le développement de la théorie de l'apprentissage statistique (statistical learning). Cette théorie, fondée sur les premiers travaux de Vapnik datant des années 70, a beaucoup progressé récemment à la suite de résultats en théorie des probabilités concernant les inégalités de concentration. Un lien est ainsi en train de se constituer entre la communauté statistique et une communauté plus "algorithmique" disposant depuis longtemps de méthodes très efficaces mais dont les propriétés théoriques étaient mal établies. 
+
+Il s'ouvre ainsi un champ méthodologique au nombreuses applications pratiques. La thèse de T. Mary-Huard porte sur des méthodes de classification à partir de données d'expression, et notamment sur la sélection de gènes pertinents pour prédire l'état d'un tissu. Les approches envisagées sont directement issus des progrès récents de l'apprentissage statistique, notamment en terme d'estimation du risque d'erreur. De même, la thèse de F. Picard sur la segmentation de données issues pouces CGH fait appel à des technique de segmentation de processus et de sélection de modèle issues de ce domaine. 
+
+Notre équipe se forge actuellement une culture sur ces méthodes et profite notamment des activités du groupe SELECT (animé par G. Celeux de l'INRIA) qui réunit des chercheurs, enseignants-chercheurs et doctorants de l'université d'Orsay, de l'INRIA et de l'INA PG. Cette thématique constitue une orientation méthodologique à long terme à laquelle je compte me consacrer. 
+
+
+
+
+
+
+
+Local Variables: mode: latex TeX-master: "Dossier-DR2" 

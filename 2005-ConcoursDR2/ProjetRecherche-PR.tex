@@ -1,0 +1,505 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\chapter{Projet de recherche} \label{Chap:ProjRech}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsubsection{Place au sein de BIA}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+J'effectue ma recherche au sein du département Biométrie et
+Intelligence Artificielle (BIA) de l'INRA depuis que j'ai débuté ma
+carrière. Au cours de mon détachement au sein de l'unité MIG, mes
+liens avec ce département se sont encore renforcés et je continue à
+m'impliquer dans ses choix stratégiques et scientifiques.
+
+Mon détachement au sein de l'unité MIG a été une expérience très
+heureuse pour moi qui continue à me faire regretter de ne pas pouvoir,
+malgré mon goût certain pour l'enseignement, consacrer autant de temps
+que je le voudrais à la recherche. À l'occasion de ce détachement,
+j'ai entamé (ou poursuivi) un certain nombre de collaborations que je
+veille à entretenir. La diversité des sujets étudiés dans cette unité
+et son authentique pluridisciplinarité en font un lieu précieux dans
+lequel je souhaite pouvoir continuer à travailler régulièrement.
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Statistique, génomique et post-génomique}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+Comme je l'ai montré dans mon rapport d'activité, mes recherches sont
+essentiellement tournées depuis plusieurs années vers la génomique et
+la post-génomique. Elles le seront certainement pour plusieurs années
+encore. Cette prédiction se fonde sur trois observations.
+\begin{itemize}
+\item La biologie moléculaire est une discipline suffisamment vivace
+  et foisonnante pour fournir longtemps encore des sujets de réflexion
+  aux statisticiens.
+\item Le caractère <<~inter-discplinaire~>> de ces recherches les
+  rendent particulièrement passionnantes et les progrès actuels de la
+  biologie moléculaire donnent envie de continuer à les suivre.
+\item Ce caractère inter-displinaire implique un dialogue entre
+  informaticiens, mathématiciens et surtout biologistes. Je me suis,
+  peu à peu, forgé une culture élémentaire en biologie moléculaire (ma
+  formation scolaire en biologie s'arrête au baccalauréat) et il me
+  semble raisonnable de la faire fructifier.
+\end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsubsection{Génomique}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+Les années 90 ont vu l'explosion de la génomique c'est-à-dire d'un
+ensemble de méthodes intensives d'exploration des génomes. L'objet
+scientifique central de ce domaine était alors la séquence biologique
+(le plus souvent d'ADN), ses propriétés, sa structure et son
+organisation.  C'est dans ce cadre que se situe bon nombre des
+recherches du groupe SSB ((cf. rapport d'activité), notamment sur les
+statistiques de motifs.
+
+Les problèmes de génomique ne sont pas épuisés puisque les données de
+séquences continuent à être produites en masse et demandent donc des
+outils d'analyse automatique de plus en plus efficaces. La {\em
+  génomique comparative}, qui se propose de comparer des génomes
+(souvent complets) entre eux, a encore augmenté la complexité des
+problèmes à traiter.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsubsection{Post-génomique}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+A la fin des années 90, les biologistes ont mis au point des méthodes
+tout aussi intensives (on parle souvent de <<~haut débit~>>)
+permettant d'étudier d'autres éléments fondamentaux en biologie
+moléculaire~: les transcrits, les protéines, les métabolites, etc. On
+a ainsi vu fleurir les mots {\em transcriptome}, {\em protéome}, {\em
+  métabolome}. Un objectif fondamental est de comprendre la fonction
+de gènes découverts, entre autres, à l'occasion de l'analyse des
+génomes~: c'est la mission de la {\em génomique fonctionnelle}.
+
+Une caractéristique importante de ces nouvelles méthodes est qu'elles
+produisent des données beaucoup plus sensibles à la variabilité
+expérimentale que celles rencontrées en génomique et que, par
+conséquent, les besoins en outils d'analyse automatique, notamment
+statistiques se sont encore accrus.
+
+C'est pour répondre à ces besoins que l'équipe <<~Génome~>> de l'UMR
+INA~PG / INRA BIA a entamé ces travaux sur les méthodes statistiques
+pour l'analyse du transcriptome.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsubsection{Thèmes académiques}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+Les sujets et projets de recherche que je vais présenter ici se
+fondent sur les outils statistiques et probabilistes suivants.
+\begin{itemize}
+\item Les travaux sur les statistiques de motifs se placent essentiellement
+  dans des modèles markoviens à temps discret (chaînes de Markov,
+  chaînes de Markov cachées, ...) ou à temps continu (processus de
+  Poisson composés, homogènes ou hétérogènes).
+\item Les travaux sur l'analyse des puces à ADN utilisent des méthodes
+  de classification supervisée et des résultats concernant
+  l'apprentissage statistique et les méthodes de pénalisation.
+\item Ceux enfin portant sur l'analyse des puces chromosomiques
+  utilisent des techniques de détection de rupture.
+\end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Statistiques de motifs}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+Ce sujet est un des sujets fétiches du groupe SSB qui a déjà produit
+de nombreux résultats depuis ceux sur les mots de fréquence
+exceptionnelle (\cite{PRT95}, \cite{Sch95a}).
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Occurrences et répartition de motifs}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+Ces travaux ont fourni l'essentiel de mon mémoire d'Habilitation à
+Diriger des Recherches (HDR)\footnote{Les trois premiers chapitres de
+  mon mémoire fournissent une présentation générale et peu technique
+  de ces travaux} et on peut y distinguer deux parties.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\paragraphSR{Résultats exacts dans des modèles de chaînes de Markov.}
+
+Mes premiers travaux en collaboration avec J.-J. Daudin ont porté sur
+la distribution des occurrences d'un ou plusieurs mots dans une chaîne
+de Markov, modèle de référence pour l'analyse des séquences
+biologiques. De façon générale, cette modélisation considère la
+séquence d'ADN comme une suite aléatoire de lettres dans laquelle
+apparaissent <<~par hasard~>> des mots. Le principe de ces approches
+est de comparer le nombre ou la répartition des occurrences d'un mot
+particulier dans une séquence réelle avec ce que prévoit le modèle
+aléatoire. L'exemple historique du groupe SSB est le mot Chi d'{\em E.
+  coli} ({\tt gctggtgg}) qui apparaît 762 fois dans le génome de cette
+bactérie alors que, en supposant les 4 bases ${\tt a}$, ${\tt c}$,
+${\tt g}$ et ${\tt t}$ équiprobables, on ne l'attend que 70 fois. Un
+tel mot est dit exceptionnellement fréquent.
+
+
+Les résultats obtenus dans Robin et Daudin (1999 et 2001) permettent
+$(i)$ de déterminer la probabilité qu'un motif particulier apparaisse
+dans une suite aléatoire de lettres et $(ii)$ de détecter des motifs
+dont la répartition le long d'une séquence est particulièrement
+irrégulière. On peut ainsi
+\begin{enumerate}[$(i)$]
+\item détecter des motifs fréquemment présents dans des régions
+  promotrices (en amont des gènes) et définir ainsi des consensus
+  (Robin et al. (2002)),
+\item étudier la répartition de certains motifs d'intérêt (comme le
+  motif Chi de différentes bactéries) le long d'un génome.
+\end{enumerate}
+Ces résultats ont également fourni la distribution de référence pour
+juger de la qualité des approximations proposées par \cite{PRT95} et
+\cite{Sch95a}.
+
+Si nous les avons toujours appliqués à des analyses génomiques, ces
+résultats sont suffisamment généraux pour présenter un intérêt
+académique et pour connaître d'autres applications potentielles.
+Concernant les applications génomiques, ils se heurtent toutefois à des
+limites pratiques quand on veut analyser un grand nombre de mots ou de
+très longues séquences ou, surtout, si on veut les généraliser à des
+chaînes de Markov d'ordre supérieur à 1.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\paragraphSR{Modèles de Poisson.}
+
+Ces limites m'ont amené à avoir recours à une autre modélisation
+classique (mais peu utilisée en génomique)~: le processus de Poisson
+composé (Robin (2002)).  Ce modèle présente l'avantage d'être très bien
+maîtrisé théoriquement et surtout d'être très économe en paramètres.
+La complexité des calculs qu'il induit est bien moindre que pour les
+chaînes de Markov et les problèmes pratiques signalés plus haut
+disparaissent.
+
+A l'occasion de ces travaux, j'ai amélioré mes connaissances sur les
+statistiques de <<~scan~>> utilisées dans de nombreux domaines, pour
+étudier la répartition d'une série d'événements au cours du temps ou
+d'une série d'objets le long d'un axe (\cite{GNW01}). La
+significativité des résultats obtenus avec ces statistiques est
+souvent difficile à établir de façon explicite et on a le plus souvent
+recours à des techniques d'approximations poissonniennes auxquelles
+j'ai aussi eu à m'intéresser (\cite{Ald89}, \cite{BHJ92}).
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{D'autres statistiques de motifs}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+Les statistiques de motifs ne constituent donc pas un sujet de
+recherche nouveau. Il ne semble pas épuisé pour autant, et on peut
+identifier au moins deux directions dans lesquelles le poursuivre pour
+répondre aux besoins sans cesse croissants d'analyses intensives (et
+donc automatiques) des séquences biologiques. Ces travaux
+constitueront des extensions de résultats déjà connus et bien
+maîtrisés au sein de SSB.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\paragraphSR{Prise en compte de l'hétérogénéité des séquences.}
+
+La plupart des modèles présentés se fondent sur l'hypothèse que la
+séquence biologique étudiée est homogène. Cette hypothèse est le plus
+souvent biologiquement irréaliste. On distingue notamment dans presque
+tous les génomes des régions riches en ${\tt g}$ et ${\tt c}$ et des
+régions pauvres en ${\tt g}$ et ${\tt c}$. On ne peut donc pas
+supposer que la composition en bases ne varie pas longitudinalement et
+il faut donc développer des outils prenant en compte cette
+hétérogénéité.
+
+Un premier travail, déjà assez avancé, porte sur l'étude de la
+répartition de motifs dans un modèle de Poisson hétérogène (Ledent et
+Robin (2003)). La modélisation poissonnienne se prête très bien à la
+prise en compte d'une hétérogénéité connue {\em a priori}. Il existe
+alors des techniques permettant d'homogénéiser la séquence pour
+pouvoir ensuite appliquer les méthodes développées pour des séquences
+homogènes.
+
+Un second projet, en collaboration avec S. Schbath (INRA-MIG), porte
+sur les mots de fréquence exceptionnelle dans des modèles de chaînes
+de Markov cachées qui sont devenues une façon classique de modéliser
+l'hétérogénéité des séquences biologiques. Ce modèle constitue une
+extension du modèle de chaînes de Markov~: il suppose toujours que la
+séquence d'ADN est une suite aléatoire de lettres, mais il prévoit que
+la façon dont ces lettres sont générées est gouvernée par un processus
+caché. Typiquement, le processus caché peut varier entre les deux
+états <<~{\tt g+c}-riche~>> et <<~{\tt g+c}-pauvre~>>.
+
+Formellement, on peut réutiliser des résultats déjà disponibles
+puisqu'une chaîne de Markov cachée est une chaîne de Markov homogène.
+Cependant, cette chaîne de Markov est observée de façon incomplète (il
+manque les états ... cachés) et ces résultats demandent donc à être
+adaptés.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\paragraphSR{Comparaisons de résultats issus de plusieurs séquences.}
+
+La recherche des mots de fréquence exceptionnelle est maintenant
+utilisée dans de nombreuses études biologiques. La comparaison des
+résultats qu'elle produit pour différents génomes devient donc une
+question naturelle en génomique ... comparative. On peut se demander, par
+exemple, si un mot présente le même degré d'exceptionnalité dans deux
+séquences. En collaboration avec S.  Schbath, nous avons déjà exhibé
+quelques solutions simples (et approximatives) qui semblent tout à
+fait accessibles. La formalisation générale de ce problème n'est
+cependant pas évidente, principalement à cause des différences de
+composition et de longueur entre les génomes.
+
+% Comparaisons multiples et mots exceptionnels
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Analyse du transcriptome}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+Rapidement après leur apparition, il est apparu que les puces à ADN
+allaient donner du fil à retordre aux statisticiens à cause de
+l'abondance et de la variabilité des mesures qu'elles produisent. Les
+problèmes statistiques rencontrés dans ces analyses sont nombreux.
+Nombre d'entre eux peuvent cependant trouver des solutions dans des
+méthodes classiques. D'autres demandent des développements
+méthodologiques spécifiques.
+
+Le problème de l'analyse différentielle constitue un très bon exemple
+(Robin (2003))~: de nombreuses expériences visent à déterminer les
+gènes dont le niveau d'expression varie entre deux conditions. Ce
+problème est un exemple typique de comparaison de deux populations
+pour lequel il existe de nombreux tests statistiques, à commencer
+par le très classique test de student. Cependant, ces analyses portent
+simultanément sur des milliers de gènes, et le faible risque d'erreur
+prévu par le test de student pour un gène devient immense quand il est
+encouru des milliers de fois. On aboutit alors à un problème de test
+multiple, problème ancien en statistique mais reposé de façon
+extrêmement aigu par les biopuces.
+
+Dans cette thématique, j'ai d'une part des activités d'animation
+scientifique et de diffusion de méthodes classiques auprès des
+biologistes, et d'autre part des activités de recherche plus
+académique. L'analyse des données de biopuces étant un champ
+extrêmement vaste, nous commençons seulement à préciser les sujets de
+recherches méthodologiques dans lesquels nous espérons progresser.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Diffusion de méthodes}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\paragraphSR{De l'intérêt des enseignants-chercheurs.}
+
+L'équipe <<~Génome~>> de l'UMR INA~PG / INRA BIA a rapidement compris
+qu'elle avait un rôle à jouer dans la diffusion de ces méthodes auprès
+des biologistes, soit par des activités d'animation scientifique, soit
+par des collaborations. À l'heure actuelle, notre équipe a acquis un
+certain renom sur ce thème au niveau national et même international.
+
+Cette aptitude à répondre rapidement à un tel type de besoin est en
+grande partie liée à notre statut d'enseignant qui nous oblige à
+fréquenter régulièrement une large palette d'outils. La naissance de
+cette thématique au sein du département BIA illustre, à mon sens,
+l'intérêt pour un tel département de compter des
+enseignants-chercheurs dans ses rangs.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\paragraphSR{Développement d'outils logiciels.}
+
+Comme je l'ai indiqué dans mon rapport d'activité, je co-encadre
+actuellement avec C. Hennequet et H. Chiapello (INRA-MIG) le CDD de
+Karine Piot qui développe une série de modules d'analyse de données de
+membranes ({\em macroarray}). Ce projet a été initié à l'occasion de
+discussions avec les membres du laboratoire de Biologie du
+Développement et Biotechnologies (INRA, Jouy-en-Josas) portant sur le
+développement de l'embryon bovin. Ces développements spécifiques sont
+rendu nécessaires pas le fait que les procédures proposées par les
+logiciels statistiques standards (SAS, S+, R) ne permettent pas
+d'analyser plusieurs milliers de gènes dans un même dispositif.
+
+Je situe cette activité dans le cadre de mes actions de diffusion~:
+dans ce projet nous insistons beaucoup sur le fait d'associer les
+biologistes aux développements des outils afin qu'ils deviennent
+autonomes dans leur utilisation. Cette association comporte
+nécessairement une part importante de formation à des méthodes
+statistiques usuelles (l'analyse de la variance principalement).
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Thématiques actuelles et futures}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\paragraphSR{Analyse différentielle.}
+
+Pour l'instant, la plupart de nos travaux (avec J.-J. Daudin) ont
+porté sur la recherche de gènes dont le niveau d'expression varie
+entre deux conditions. Ce sujet est un bon exemple du caractère un peu
+<<~marécageux~>> du domaine. Ces mesures requièrent de nombreuses
+normalisations préalables pour pouvoir être analysées avec les outils
+statistiques usuels, et ces normalisations ont une influence bien plus
+grande sur les résultats finaux que la méthode statistique --~plus ou
+moins sophistiquée~-- utilisée pour détecter les gènes intéressants.
+Ces travaux sur l'analyse différentielle se poursuivent avec la
+thèse de P. Delmar qui travaille sur une modélisation de la
+variabilité des différents gènes en utilisant des modèles de mélange.
+
+Sur le même sujet, j'ai entamé une collaboration avec A. Bar-Hen
+(université de Marseille St-Jérôme) sur les problèmes de tests multiples,
+particulièrement cruciaux quand on teste plusieurs milliers de gènes à
+la fois (Bar-Hen et Robin (2003)). Nous travaillons à l'heure actuelle
+sur une méthode itérative visant à sélectionner le plus grand ensemble
+de gènes dont le niveau d'expression ne varie pas entre deux
+conditions. Cette procédure englobe différents tests statistiques
+usuels (analyse de la variance, test de Kruskal-Wallis).  Le contrôle
+séquentiel du niveau des tests et du {\em False Discovery Rate} (FDR,
+\cite{BeH95}) est obtenu grâce à des propriétés de type markovien de
+cette procédure.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\paragraphSR{Puces chromosomiques.}
+
+La thèse de F. Picard (partagée entre notre unité et le Diabete center
+de San Francisco) nous donne aussi l'occasion de travailler sur des
+puces sur lesquelles la quasi totalité de l'ADN génomique est déposée.
+D'un point de vue statistique, ces puces requièrent des outils
+spécifiques puisqu'elles produisent un signal longitudinal (et non des
+mesures séparées correspondant aux différents gènes). À l'heure
+actuelle, la littérature sur ce sujet est encore assez pauvre.
+
+Nos travaux sur ce thème sont encore balbutiants, mais nous espérons
+bénéficier des compétences acquises au sein de l'UMR sur les
+détections de rupture lors de travaux passés mais sur des applications
+totalement différentes (contôle de la qualité, notamment).
+
+D'autre part, cette thèse a permis à notre UMR de créer des liens
+formels avec l'équipe du Pr. T. Speed à Berkeley (en pointe au niveau
+international sur les méthodes statistiques d'analyse des biopuces)
+puisque F. Picard participe aux travaux de cette équipe lors de ses
+séjours à San Francisco.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\paragraphSR{Classification supervisée et apprentissage statistique.}
+
+Enfin, un problème fréquemment rencontré dans l'analyse des biopuces est
+la prédiction du type de tissu à partir des niveaux d'expression des
+gènes. Les puces permettent-elles, par exemple, de distinguer les
+tissus sains des tissus cancéreux~? Ce type de problème est appelé
+{\em classification supervisée} et de nombreuses techniques existent
+pour effectuer de telles prédictions.
+
+Ce problème biologique constitue une opportunité intéressante car il
+apparaît en même temps que le développement de la théorie de
+l'apprentissage statistique ({\em statistical learning}). Cette
+théorie, fondée sur les premiers travaux de Vapnik datant des années
+70, a beaucoup progressé récemment à la suite de résultats en théorie
+des probabilités concernant les équations de concentration. Un lien
+est ainsi en train de se constituer entre la communauté statistique et
+une communauté plus <<~algorithmique~>> disposant depuis longtemps de
+méthodes de classification très efficaces mais dont les propriétés
+théoriques étaient mal établies.  La thèse de T. Mary-Huard porte sur
+ces méthodes de classification et notamment sur la sélection de gènes
+pertinents pour prédire l'état d'un tissu.  Notre équipe se forge
+actuellement une culture sur les méthodes de type SVM ({\em Support
+  Vector Machine}), en aprticulier au travers d'un groupe de lecture du
+livre de \cite{ScM02}. Cette compétence devrait se renforcer à
+l'occasion d'une collaboration avec le projet SELECT de l'INRIA qui
+réunira sur le campus d'Orsay différents statisticiens spécialistes de
+ce domaine.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Vers d'autres <<~omes~>> ?}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+Le transcriptome est évidemment loin d'être l'étape ultime de la
+compréhension des mécanismes biologiques fondamentaux. Les protéomes
+et autres métabolomes sont déjà des objets d'études. Des technologies
+permettant de les explorer existent déjà et d'autres plus performantes
+apparaîtront, c'est certain, très bientôt.
+
+Ainsi donc, on peut parier que les statisticiens seront prochainement
+sollicités pour analyser de nouvelles formes de données. C'est, en un
+sens, leur mission mais s'ils veulent la remplir efficacement, ils ne
+peuvent pas répondre à toutes ces sollicitations. Pour une équipe de
+la taille de la nôtre, il semble raisonnable de ne pas augmenter le
+nombre des thématiques en génomique fonctionnelle et de laisser à
+d'autres les autres <<~omes~>>, du moins pour le moment.
+
+L'ouverture aux autres dimensions de la génomique fonctionnelle peut
+se maintenir au travers d'activités d'animation (congrès, groupe IMPG,
+séminaires, etc.).
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Autres travaux en cours}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+Lors de mon passage dans l'unité MIG, j'avais entamé des
+collaborations avec des membres de cette unité. Je cite ici deux
+thématiques sur lesquels je continue à travailler.
+\begin{itemize}
+\item En collaboration avec H. Chiapello et C. Hennequet, je me suis
+  intéressé à un problème de classification (non supervisée) de
+  courbes de croissance du mutant de {\em B. subtilis}. L'originalité
+  de ce problème est que les données de croissance n'ont pas été
+  mesurées aux mêmes dates pour tous les mutants. À l'heure actuelle,
+  nous avons adopté une démarche fondée sur un mélange de modèles
+  mixtes.
+\item En collaboration avec H. Chiapello, dont c'était le sujet de
+  thèse, j'ai réfléchi au problème de la prédiction de l'adressage
+  cellulaire des gènes à partir de leur usage des codons, et notamment
+  sur la sélection des codons discriminants. Cette méthode est fondée
+  sur un modèle multinomial assez simple.
+\end{itemize}
+De part leur forme et leurs ambitions, ces deux sujets pourraient tout
+à fait trouver leur place dans la section suivante.
+  
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Biométrie}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+Si mes recherches sont fortement axées sur les outils statistiques
+orientés vers la biologie moléculaire, j'ai eu à travailler par le
+passé sur des sujets assez variés comme~:
+\begin{itemize}
+\item les tests non-paramétriques et les durées de vie (au cours de ma
+  thèse),
+\item la régression non-linéaire et la modélisation de thermogrammes
+  (contrat industriel avec ARILAIT),
+\item l'estimation de distances et le modèle linéaire généralisé
+  multivarié (collaboration avec le GEVES),
+\item la compression de données et la discrimination (collaboration
+  avec le laboratoire de biologie cellulaire de l'INRA de Versailles).
+\end{itemize}
+Cette liste assez hétérogène est le résultat de collaborations
+diverses initiées dans des conditions tout aussi diverses. Ces
+travaux ont débouché au moins sur un article (thermogrammes), au plus
+sur plusieurs articles, une thèse et un logiciel (estimation de
+distances).  Sans être capable de prédire quelle sera la prochaine
+expérience de ce type, je suis certain que cette liste s'allongera.
+
+S'il est sain d'avoir une perspective scientifique bien balisée pour
+organiser ses travaux à moyen terme, il est, à mon sens, tout aussi sain de
+conserver une disponibilité suffisante pour pouvoir s'orienter vers de
+nouveaux sujets. Cette disponibilité permet de répondre à des offres
+de collaboration et constitue une ouverture absolument nécessaire pour
+définir les thématiques de recherche futures.
+
+Un enseignant-chercheur est, par nature, impliqué dans des thématiques
+très diverses, notamment au travers des stages d'étudiants. Le lien
+entre les activités de recherche et d'enseignement fonctionne donc à
+double sens. Nos recherches nous permettent de créer de nouveaux
+enseignements, et nos enseignements nous font rencontrer de nouveaux
+thèmes. De plus, cette plus grande proximité des applications nous
+rend, sans doute, particulièrement réceptif aux besoins et aux
+attentes du monde <<~non-académique~>>.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\bibliography{../../Dossiers}
+\bibliographystyle{astats-fr}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%% Local Variables: 
+%%% mode: latex
+%%% TeX-master: "DossierPR"
+%%% End: 

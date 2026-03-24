@@ -1,0 +1,23 @@
+\newcommand{\coeftri}{0.866}
+% \newcommand{\coefobs}{0.6}
+\newcommand{\coefhid}{1}
+
+  \begin{tikzpicture}
+  \node[hidden] (Hi) at (0*\coefhid*\heu, 0*\coefhid*\veu) {\footnotesize $Z_i$};
+  \node[hidden] (Hj) at (0*\coefhid*\heu, 1*\coefhid*\veu) {\footnotesize $Z_j$};
+  \node[hidden] (Hk) at (1*\coefhid*\heu, 0*\coefhid*\veu) {\footnotesize $Z_k$};
+  \node[hidden] (Hl) at (1*\coefhid*\heu, 1*\coefhid*\veu) {\footnotesize $Z_\ell$};
+
+  \node[observed] (Oi) at (-0.6*\coefhid*\heu, -0.6*\coefhid*\veu) {\footnotesize $Y_i$};
+  \node[observed] (Oj) at (-0.6*\coefhid*\heu, 1.6*\coefhid*\veu) {\footnotesize $Y_i$};
+  \node[observed] (Ok) at (1.6*\coefhid*\heu, -0.6*\coefhid*\veu) {\footnotesize $Y_i$};
+  \node[observed] (Ol) at (1.6*\coefhid*\heu, 1.6*\coefhid*\veu) {\footnotesize $Y_i$};
+
+  \draw[arrow] (Hi) to (Oi);   \draw[arrow] (Hj) to (Oj);   
+  \draw[arrow] (Hk) to (Ok);   \draw[arrow] (Hl) to (Ol);   
+
+  \draw[edge] (Hi) to (Hj);   \draw[edge] (Hi) to (Hk);   \draw[edge] (Hi) to (Hl);   
+  \draw[edge] (Hj) to (Hk);   \draw[edge] (Hj) to (Hl);   \draw[edge] (Hk) to (Hl);   
+
+  \end{tikzpicture}
+

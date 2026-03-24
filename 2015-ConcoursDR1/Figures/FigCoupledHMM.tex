@@ -1,0 +1,58 @@
+  \begin{tikzpicture}
+  \node[empty] (E1tm2) at (-.75*\heu, 0) {\footnotesize $\quad$};
+  \node[hidden] (H1tm1) at (0, 0) {\footnotesize $Z^k_{t-1}$};
+  \node[hidden] (H1t) at (\heu, 0) {\footnotesize $Z^k_{t}$};
+  \node[hidden] (H1tp1) at (2*\heu, 0) {\footnotesize $Z^k_{t+1}$};
+  \node[empty] (E1tp2) at (2.75*\heu, 0) {\footnotesize $\quad$};
+
+  \node[empty] (Eitm2) at (-.75*\heu, \veu) {\footnotesize $\quad$};
+  \node[hidden] (Hitm1) at (0, \veu) {\footnotesize $Z^j_{t-1}$};
+  \node[hidden] (Hit) at (\heu, \veu) {\footnotesize $Z^j_{t}$};
+  \node[hidden] (Hitp1) at (2*\heu, \veu) {\footnotesize $Z^j_{t+1}$};
+  \node[empty] (Eitp2) at (2.75*\heu, \veu) {\footnotesize $\quad$};
+
+  \node[empty] (EItm2) at (-.75*\heu, 2*\veu) {\footnotesize $\quad$};
+  \node[hidden] (HItm1) at (0, 2*\veu) {\footnotesize $Z^i_{t-1}$};
+  \node[hidden] (HIt) at (\heu, 2*\veu) {\footnotesize $Z^i_{t}$};
+  \node[hidden] (HItp1) at (2*\heu, 2*\veu) {\footnotesize $Z^i_{t+1}$};
+  \node[empty] (EItp2) at (2.75*\heu, 2*\veu) {\footnotesize $\quad$};
+  
+  \draw[arrow] (E1tm2) to (H1tm1);  \draw[arrow] (H1tp1) to (E1tp2);   
+  \draw[arrow] (H1tm1) to (H1t);   \draw[arrow] (H1t) to (H1tp1);  
+  \draw[arrow] (Eitm2) to (Hitm1);  \draw[arrow] (Hitp1) to (Eitp2);   
+  \draw[arrow] (Hitm1) to (Hit);   \draw[arrow] (Hit) to (Hitp1);  
+  \draw[arrow] (EItm2) to (HItm1);  \draw[arrow] (HItp1) to (EItp2);   
+  \draw[arrow] (HItm1) to (HIt);   \draw[arrow] (HIt) to (HItp1);  
+  
+  \draw[edge] (H1tm1) to (Hitm1);   
+  \draw[edge] (H1tm1) to [bend left](HItm1);  
+  \draw[edge] (Hitm1) to (HItm1);  
+  \draw[edge] (H1t) to (Hit);   
+  \draw[edge] (H1t) to [bend left](HIt);  
+  \draw[edge] (Hit) to (HIt);  
+  \draw[edge] (H1tp1) to (Hitp1);   
+  \draw[edge] (H1tp1) to [bend left](HItp1);  
+  \draw[edge] (Hitp1) to (HItp1);  
+  
+  \node[observed] (O1tm1) at (.5*\heu, -.5*\veu) {\footnotesize $Y^k_{t-1}$};
+  \node[observed] (O1t) at (1.5*\heu, -.5*\veu) {\footnotesize $Y^k_{t}$};
+  \node[observed] (O1tp1) at (2.5*\heu, -.5*\veu) {\footnotesize $Y^k_{t+1}$};
+  \node[observed] (Oitm1) at (.5*\heu, .5*\veu) {\footnotesize $Y^j_{t-1}$};
+  \node[observed] (Oit) at (1.5*\heu, .5*\veu) {\footnotesize $Y^j_{t}$};
+  \node[observed] (Oitp1) at (2.5*\heu, .5*\veu) {\footnotesize $Y^j_{t+1}$};
+  \node[observed] (OItm1) at (.5*\heu, 1.5*\veu) {\footnotesize $Y^i_{t-1}$};
+  \node[observed] (OIt) at (1.5*\heu, 1.5*\veu) {\footnotesize $Y^i_{t}$};
+  \node[observed] (OItp1) at (2.5*\heu, 1.5*\veu) {\footnotesize $Y^i_{t+1}$};
+  
+  \draw[arrow] (H1tm1) to (O1tm1);   
+  \draw[arrow] (H1t) to (O1t);
+  \draw[arrow] (H1tp1) to (O1tp1);   
+  \draw[arrow] (Hitm1) to (Oitm1);   
+  \draw[arrow] (Hit) to (Oit); 
+  \draw[arrow] (Hitp1) to (Oitp1);  
+  \draw[arrow] (HItm1) to (OItm1);  
+  \draw[arrow] (HIt) to (OIt);
+  \draw[arrow] (HItp1) to (OItp1);  
+
+  \end{tikzpicture}
+

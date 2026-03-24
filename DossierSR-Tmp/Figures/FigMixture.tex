@@ -1,0 +1,17 @@
+  \begin{tikzpicture}
+  \node[empty] (E1tm2) at (-1*\heu, 0) {\footnotesize $\quad$};
+  \node[hidden] (H1tm1) at (0, 0) {\footnotesize $Z_{i}$};
+  \node[hidden] (H1t) at (\heu, 0) {\footnotesize $Z_{j}$};
+  \node[hidden] (H1tp1) at (2*\heu, 0) {\footnotesize $Z_{k}$};
+  \node[empty] (E1tp2) at (3*\heu, 0) {\footnotesize $\quad$};
+
+  \node[observed] (O1tm1) at (0, -1*\veu) {\footnotesize $Y_{i}$};
+  \node[observed] (O1t) at (\heu, -1*\veu) {\footnotesize $Y_{j}$};
+  \node[observed] (O1tp1) at (2*\heu, -1*\veu) {\footnotesize $Y_{k}$};
+  
+  \draw[arrow] (H1tm1) to (O1tm1);   
+  \draw[arrow] (H1t) to (O1t);
+  \draw[arrow] (H1tp1) to (O1tp1);   
+
+  \end{tikzpicture}
+

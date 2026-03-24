@@ -1,0 +1,68 @@
+%=============================================================
+\subsection{Modèles à variables latentes \label{subsec:latente}}
+
+Dans bon nombre d'applications, notamment en biologie, les données observées ne sont que le reflet d'un processus plus profond qui n'est pas directement accessible. Ce processus sous-jacent se révèle généralement par une structure particulière des observations dont il convient de tirer parti pour espérer remonter jusqu'au phénomène caché. Les modèles à variables latentes ou modèles à données incomplètes constituent une façon naturelle de décrire ce genre de situation.
+
+Cette vaste classe de modèles comprend notamment les modèles de mélange (déjà évoqués à la section \ref{subsec:microarray}), les chaînes de Markov cachées (HMM) très populaires en bioinformatique mais aussi des modèles plus complexes comme les chaînes de Markov cachées couplées ou le modèle à blocs stochastiques dédié aux réseaux d'interactions. La figure \ref{Fig:ModeleGraphique} donne une représentation de ces différents modèles sous forme de modèles graphiques. La complexité de ces différents graphes annonce celle de l'inférence des modèles associés, qui se fondent le plus souvent sur des algorithmes de type {\sl Expectation-Maximization} (EM), exacts ou approchés. Du fait de la variété de leurs applications et de la richesse des problèmes statistiques qu'ils posent, je me suis spécialisé dans ce type de modèles depuis plusieurs années.
+
+\begin{figure}[ht]
+  \hspace{-.05\textwidth}
+  \begin{tabular}{cc}
+    a~: Modèle de mélange & b~: Modèle de Markov caché \\
+    \begin{tabular}{c}
+	 \input{../Figures/FigMixture.tex}
+    \end{tabular}
+    &
+    \begin{tabular}{c}
+	 \input{../Figures/FigHMM.tex}
+    \end{tabular} \\ 
+    ~ \\
+    c~: Stochastic block model & d~: Modèle de Markov caché couplé \\
+    \begin{tabular}{c} \\
+	 \input{../Figures/FigSBM.tex}
+    \end{tabular}
+    &
+    \begin{tabular}{c}
+	 \input{../Figures/FigCoupledHMM.tex}
+    \end{tabular} 
+  \end{tabular}
+  \caption{Exemples de modèles graphiques incluant des variables cachées. Les variables observées sont notées $Y$ et les variables cachées $Z$. Les traits pleins et les flèches indiquent les dépendances conditionnelles. Les liens pointillés indiquent les dépendances entre variables cachées conditionnellement aux variables observées. \label{Fig:ModeleGraphique}}
+\end{figure}
+
+\paragraph{Modèles de mélange.}
+\Col{C. Bérard, P. Delmar, J.-J. Daudin, M.-M. Martin-Magniette, S. Volant}
+Les modèles de mélange proposent une description simple de l'hétérogénéité observée dans un ensemble de mesures. Ils supposent qu'à l'observation $Y_i$ faite sur l'individu $i$ est associé un statut caché $Z_i$ qui gouverne la distribution de l'observation $Y_i$ (voir la figure \ref{Fig:ModeleGraphique}a). La loi de l'observation conditionnellement à la variable cachée est appelée loi d'émission. Un tel modèle permet ainsi de décrire les différences de variabilités entre les expressions d'un ensemble de gènes \cite{DRD05,DRL05}. 
+
+Dans ce cas simple, on peut recourir à un algorithme EM qui alterne une étape E lors de laquelle est calculée la loi conditionnelle des variables cachées sachant les observées $P(Z|Y)$ et une étape M lors de laquelle une version complétée de la vraisemblance est maximisée en les paramètres du modèle. L'étape E est généralement la plus critique dans la mesure où elle dépend fortement de la structure de dépendance entre les observations. Dans le cas du mélange, elle se résout par une application directe de la formule de Bayes.
+
+De façon générale, ces modèles posent des problèmes d'identifiabilité. Ainsi, si on suppose les observations réparties en 3 groupes (cachés), on peut arbitrairement numéroter les groupes (1, 2, 3) ou (2, 3, 1). De plus, pour pouvoir identifier les différents groupes, on est généralement obligé de fixer la forme des différentes lois d'émission, en les supposant typiquement unimodales. Dans le cas des tests multiples déjà décrit en section \ref{subsec:microarray}, du fait de la connaissance parfaite d'une des lois d'émission, on peut relâcher toute contrainte de forme sur l'autre loi \cite{RBD07,GRC09} et obtenir, par exemple, une loi bimodale comme présentée à la figure \ref{Fig:KerFDR}. Cette approche permet de donner une flexibilité maximale au modèle et donc de couvrir une gamme plus large de cas.
+
+Dans certaines applications, il convient au contraire de proposer un modèle contraint pour mieux identifier les différentes composantes du mélange. La thèse de C. Bérard portait entre autres sur l'analyse d'expériences d'immuno-précipitation de la chromatine (ChIP-chip) visant à identifier le long du génome les sites de fixation d'une protéine particulière. Dans ces expériences, il était d'usage d'hybrider conjointement des fragments issus de l'ADN total et des fragments issus de l'ADN enrichi (cibles de la protéine). Cet usage visait à prendre en compte l'efficacité variable du processus d'amplification et d'hybridation en ramenant le signal enrichi mesuré à un locus $t$ au signal total mesuré au même locus. Dans ce problème, le signal total peut être vu comme une covariable $x_t$ et le signal enrichi comme la variable observée $Y_t$ dont la distribution dépend à la fois de la covariable et du statut caché $Z_t$. Une telle description aboutit à un modèle de mélange de régression linéaire \cite{MMB08}.
+
+\paragraph{Modèles de Markov cachés.} 
+\Col{C. Bérard, E. Gassiat, M. Martin-Magniette, S. Volant}
+Comme indiqué à la section \ref{subsec:rupture}, bon nombre de signaux génomiques sont organisés le long du génome. C'est notamment le cas des données issues de puces à haute densité ({\sl tiling arrays}) qui permettent d'identifier des régions transcrites ou des sites de fixation de protéine. Là encore, il s'agit de distinguer les régions transcrites de celles qui ne le sont pas. Un modèle de mélange permet d'effectuer cette classification, mais il se prive de l'information de localisation. Or il est raisonnable de penser que les statuts des différents locus sont eux-mêmes organisés le long du génome.
+
+Les modèles de Markov cachés (HMM) tirent profit de cette information supplémentaire en prévoyant une dépendance entre les statuts de locus voisins (voir la figure \ref{Fig:ModeleGraphique}b). Du point de vue de l'inférence, le recours à EM est rendu possible par l'algorithme {\sl forward-backward} qui permet de déterminer en un temps linéaire la loi conditionnelle de variables cachées $P(Z|Y)$.
+On peut ainsi profiter de cette structure pour analyser finement le paysage de transcription au sein même d'un gène \cite{NLR09}. 
+
+Le travail de thèse de C. Bérard a en grande partie porté sur la conception de HMM pour l'analyse de données de transcriptome et d'interactions protéine-ADN. \cite{BMB11} (+ package {\sl TAHMMAnnot}) montre comment le modèle pouvait être encore enrichi (et ses performances prédictives améliorées) en prenant en compte une information d'annotation, aboutissant ainsi à un HMM hétérogène. Dans ce travail, une attention particulière a été portée à la modélisation de la loi d'émission, sensée refléter précisément le processus sous-jacent. Les bonnes performances de ce modèle ont permis l'identification de quatre grands états de la chromatine chez {\sl A thaliana} \cite{RAB11}.
+
+Si une modélisation fine de la loi d'émission permet d'améliorer les performances de classification d'un HMM, elle repose sur une connaissance et une compréhension du phénomène qui ne sont pas toujours disponibles {\sl a priori}. On peut alors souhaiter au contraire les lois d'émission les plus flexibles possibles. Si une flexibilité totale n'est pas envisageable dans le cas d'un modèle de mélange pour des raisons d'identifiabilité, il apparaît que la dépendance entre les observations induite par un HMM autorise au contraire une liberté absolue et que le modèle sera identifiable pour peu que les lois d'émission dans les différents états ne soient simplement pas linéairement dépendantes \cite{GCR15}. 
+
+Ce résultat, fondé à l'origine sur un résultat d'algèbre de Krukall datant de 1972, me semble d'une assez grande portée dans la mesure où il ouvre tout un spectre de modélisations possibles. On peut ainsi envisager un HMM dans lequel les lois d'émission sont elles-mêmes des lois de mélange et définir un algorithme EM pour en faire l'inférence \cite{VBM13} (+ package {\sl HMMmix}). La preuve de ce résultat d'identifiabilité suggère d'autre part des stratégies d'inférence alternatives à EM, fondées par exemple sur une vraisemblance composite. Les quelques pistes évoquées dans \cite{GCR15} sont, à mon avis, loin d'épuiser les applications possibles de ce résultat.
+
+\paragraph{Approximations variationnelles.}
+\Col{J.-J. Daudin, N. Peyrard, S. Volant}
+Mes contributions sur l'analyse des réseaux seront l'objet de la section \ref{subsec:reseau}. Je signale cependant ici des travaux sur le {\sl stochastic block model} (SBM) qui permet de décrire l'organisation d'un réseau d'interaction entre individus (ou espèces). Il s'agit d'un modèle de mélange dans lequel chaque individu est supposé appartenir à une classe (cachée), la probabilité d'interaction entre deux individus étant fonction de leurs classes respectives. Ce modèle est décrit dans la figure \ref{Fig:ModeleGraphique}c.
+
+\cite{DPR08} traite de l'inférence de ce modèle qui pose des problèmes spécifiques. En effet le calcul de la loi conditionnelle $P(Z|Y)$ n'est plus possible du fait de la ``moralisation'' du modèle graphique (figurée par les arêtes pointillées dans la figure \ref{Fig:ModeleGraphique}c)~: l'observation de chaque arête nous informe simultanément sur les classes des deux noeuds qu'elle relie, les rendant ainsi conditionnellement dépendants. Ceci étant vrai pour chaque paire de noeuds, les classes de tous les noeuds sont toutes conditionnellement dépendantes et on ne peut espérer profiter d'aucune factorisation pour calculer efficacement $P(Z|Y)$.  Pour éviter une procédure d'échantillonnage coûteuse, il est alors nécessaire de recourir à une approximation de cette loi, qui peut être déterminée dans un cadre variationnel.
+
+Les techniques d'approximation variationnelle, que j'ai rencontrées à l'occasion du modèle SBM, offrent une large palette d'outils extrêmement populaires en apprentissage et en {\sl machine learning}, qui empruntent largement au champ de l'optimisation fonctionnelle. On peut ainsi chercher une approximation d'une loi conditionnelle incalculable $P(Z|Y)$ sous la forme d'une loi $Q(Z)$ ayant une forme plus simple. La recherche de la loi $Q^*$ de forme simple la plus proche (par exemple au sens de la divergence de Kullback) de la loi cible $P(Z|Y)$ devient alors un problème d'optimisation fonctionnelle pour lequel une série d'algorithmes de résolution peuvent être conçus.
+
+Dans le cadre de la thèse de S. Volant, nous avons utilisé ces techniques dans une perspective d'agrégation de modèles. Quand plusieurs modèles sont en compétition pour une même tâche, par exemple, de prédiction, on peut soit choisir de sélectionner le meilleur d'entre eux (en un certain sens), soit moyenner leurs prédictions respectives. Cette moyenne doit être pondérée selon la qualité des différents modèles et une pondération naturelle est la probabilité conditionnelle de chacun des modèles au vu des données. \cite{VMR12} propose une approximation variationnelle de cette loi pour une classe très générale de modèles.
+
+A la suite du programme CNVMaize et du stage post-doctoral de X. Wang, nous terminons un travail reposant sur un HMM couplé afin de détecter les variants structuraux dans une série de lignées, tout en tenant compte de leur proximité génétique. Du fait de la structure de dépendance complexe décrite dans la figure \ref{Fig:ModeleGraphique}d, nous utilisons une approximation variationnelle pour mener à bien cette inférence.
+
+De façon générale, le recours aux modèles graphiques comme outil de modélisation permettant d'identifier les cas pour lesquels un algorithme exact et efficace est envisageable de ceux pour lesquels une approximation est nécessaire est au coeur des préoccupations du groupe de travail {\sl Algorithmic Issues for Inference in Graphical Models} (AIGM) dont les membres ont récemment rédigé un article de revue \cite{PGF15}. Ces thématiques sont également l'objet du cours que je donne au master de Mathématiques pour les sciences du vivant de l'université Paris-Saclay \cite{Rob15-MathSV}.
+

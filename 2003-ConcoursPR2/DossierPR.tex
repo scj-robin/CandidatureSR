@@ -1,0 +1,124 @@
+\documentclass[12pt, a4paper, twosides, french]{book}
+
+% Texte et mise en forme
+\usepackage{amsmath}
+\usepackage[T1]{fontenc}
+\usepackage[french]{babel}
+\usepackage{enumerate}
+%\usepackage{../../../tex/AjoutSR/multirow}
+%\usepackage{../../../tex/AjoutSR/rotating}
+%\usepackage{../../../tex/AjoutSR/float}
+\usepackage{multirow}
+\usepackage{rotating}
+\usepackage{float} 
+\usepackage{astats-fr}
+\newcommand{\refpage}[1]{\ref{#1}, p.~\pageref{#1}}
+\newcommand{\paragraphSR}[1]{\paragraph{\slshape \bfseries #1}}
+\renewcommand{\thefootnote}{*} 
+%\fnsymbol{footnote}}
+\newcommand{\note}{{$^*$}}
+\newcommand{\comment}[1]{\begin{center} {\large \slshape \bfseries #1} \end{center}}
+\renewcommand{\baselinestretch}{1.1}
+
+% Graphiques
+\usepackage{graphicx}
+\usepackage{epsfig}
+
+% Maths
+\newcommand{\x}{{$\times$}}
+
+% Mise en page, marges
+\textwidth 16cm
+\textheight 21cm 
+\topmargin 0 cm 
+\oddsidemargin 0 cm
+\evensidemargin 0 cm
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\pagestyle{empty}
+\begin{center}
+  {\Large \sffamily
+%    \vspace{-4cm}
+    Dossier de candidature au poste de \\
+    \vspace{1cm}
+    {\LARGE \bfseries Professeur de } \\
+    \vspace{1cm}
+    {\LARGE \bfseries Mathématiques Appliquées et Biométrie} \\
+    \vspace{1cm}
+    {\LARGE à l'\bfseries Institut National Agronomique Paris-Grignon} \\
+    \vspace{2cm}
+    présenté par \\
+    \vspace{1cm}
+    {\LARGE Stéphane ROBIN} \\
+    \vspace{1cm}
+    INA~PG, département OMIP \\
+    16, rue Claude Bernard, 75005 Paris \\
+    {\tt robin@inapg.inra.fr} \\
+    \vspace{2cm}
+    \today \\
+    \vspace{2cm}
+    {\LARGE \slshape \bfseries Rapport d'activité} 
+%    {\LARGE \slshape \bfseries Projet d'enseignement et de recherche}
+    }
+\end{center}
+\newpage
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{center}
+  {\Large \sffamily
+%    \vspace{-4cm}
+    Dossier de candidature au poste de \\
+    \vspace{1cm}
+    {\LARGE \bfseries Professeur de } \\
+    \vspace{1cm}
+    {\LARGE \bfseries Mathématiques Appliquées et Biométrie} \\
+    \vspace{1cm}
+    {\LARGE à l'\bfseries Institut National Agronomique Paris-Grignon} \\
+    \vspace{2cm}
+    présenté par \\
+    \vspace{1cm}
+    {\LARGE Stéphane ROBIN} \\
+    \vspace{1cm}
+    INA~PG, département OMIP \\
+    16, rue Claude Bernard, 75005 Paris \\
+    {\tt robin@inapg.inra.fr} \\
+    \vspace{2cm}
+    \today \\
+    \vspace{2cm}
+%    {\LARGE \slshape \bfseries Rapport d'activité} 
+    {\LARGE \slshape \bfseries Projet d'enseignement et de recherche}
+    }
+\end{center}
+\newpage
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\pagestyle{myheadings}
+%\pagestyle{plain}
+\setcounter{page}{1}
+%\setcounter{tocdepth}{3}
+\tableofcontents
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\input{Activite.tex}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\part{Projet d'enseignement et de recherche}\label{Part:Projets}
+
+\renewcommand{\thesection}{\arabic{section}}
+
+\input{ProjetEnseign.tex}
+
+\input{ProjetRecherche.tex}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\end{document}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+

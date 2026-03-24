@@ -1,0 +1,20 @@
+  \begin{tikzpicture}
+  \node[empty] (E1tm2) at (-.75*\heu, 0) {\footnotesize $\quad$};
+  \node[hidden] (H1tm1) at (0, 0) {\footnotesize $Z_{t-1}$};
+  \node[hidden] (H1t) at (\heu, 0) {\footnotesize $Z_{t}$};
+  \node[hidden] (H1tp1) at (2*\heu, 0) {\footnotesize $Z_{t+1}$};
+  \node[empty] (E1tp2) at (2.75*\heu, 0) {\footnotesize $\quad$};
+
+  \draw[arrow] (E1tm2) to (H1tm1);  \draw[arrow] (H1tp1) to (E1tp2);   
+  \draw[arrow] (H1tm1) to (H1t);   \draw[arrow] (H1t) to (H1tp1);  
+  
+  \node[observed] (O1tm1) at (0, -1*\veu) {\footnotesize $Y_{t-1}$};
+  \node[observed] (O1t) at (\heu, -1*\veu) {\footnotesize $Y_{t}$};
+  \node[observed] (O1tp1) at (2*\heu, -1*\veu) {\footnotesize $Y_{t+1}$};
+  
+  \draw[arrow] (H1tm1) to (O1tm1);   
+  \draw[arrow] (H1t) to (O1t);
+  \draw[arrow] (H1tp1) to (O1tp1);   
+
+  \end{tikzpicture}
+

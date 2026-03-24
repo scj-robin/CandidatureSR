@@ -1,0 +1,115 @@
+  Publications   
+
+ Publications scientifiques  
+
+ Articles primaires 
+
+SRDans des revues internationales à comité de lecture.  [Delmar et al. (2005)]DRL05 Delmar, P., Robin, S., Le Roux, D. et Daudin, J.-J. newblock (2005a). newblock Mixture model on the variance for the differential analysis of gene expression. newblock J. R. Statist. Soc. C. newblock 54 (1) 31--50. 
+
+[Delmar et al. (2005b)]DRD05 Delmar, P., Robin, S. et Daudin, J.-J. newblock (2005b). newblock Varmixt: Efficient variance modelling for the differential analysis of replicated gene expression data. newblock Bioinformatics. newblock 21 (4) 502--8. newblock doi:10.1093/bioinformatics/bti023. 
+
+[Ledent et Robin (2005)]LeR05 Ledent, S. et Robin, S. newblock (2005). newblock Checking homogeneity of patterns distribution in heterogeneous sequences. newblock J. Comp. Biol. newblock à paraître. 
+
+[Lorino et al. (2005a)]LSR05 Lorino, T., Sanaa, M., Robin, S. et Daudin, J.-J. newblock (2005a). newblock Comparison of semiparametric regression models for correlated survival data. newblock Comm. Statist. Simulations. newblock 33 (8) 1944--1975. 
+
+[Lorino et al. (2005b)]LDR05 Lorino, T., Daudin, J.-J., Robin, S. et Sanaa, M. newblock (2005b). newblock Factors associated with time to neonatal diarrhoea in french beef calves. newblock Prevent. Veterin. Med. newblock 68 (2--4) 91--102. 
+
+[Mortier et al.]MRL05 Mortier, F., Robin, S., Lassalvy, S., Baril, C. et sc Bar-Hen, A. newblock Prediction of euclidean distances with discrete and continuous outcomes. newblock Under review in J. Mult. Anal. 
+
+[Picard et al. (2005)]PRL05 Picard, F., Robin, S., Lavielle, M., Vaisse, C. et sc Daudin, J.-J. newblock (2005). newblock A statistical approach for array cgh data analysis. newblock 6 (27). newblock www.biomedcentral.com/1471-2105/6/27. 
+
+[Stefanov et al.]SRS05 Stefanov, V., Robin, S. et Schbath, S. newblock Waiting times for clumps of patterns and for structured motifs in random sequences. newblock En seconde lecture à Discrete Appl. Math. 
+
+[Aubert et al. (2004)]ABD04 Aubert, J., Bar-Hen, A., Daudin, J.-J. et Robin, S. newblock (2004). newblock Determination of the regulated genes in microarrayexperiments using local FDR. newblock 5 (1). newblock www.biomedcentral.com/1471-2105/5/125/. 
+
+[Mary-Huard et al. (2004)]MRD04 Mary-Huard, T., Robin, S., Daudin, J., Bitton, F., sc Cabannes, E. et Hilson, P. newblock (2004). newblock Spotting effect in microarray experiments. newblock BMC Bioinformatics. newblock 5 (63) 1--9. newblock www.biomedcentral.com/1471-2105/5/63. 
+
+[Bar-Hen et Robin (2003)]BaR03 Bar-Hen, A. et Robin, S. newblock (2003). newblock An iterative procedure for differential analysis of gene expression. newblock C.-R. Acad. Sciences. newblock 343--346. 
+
+[Mouille et al. (2003)]MRL03 Mouille, G., Robin, S., Lecomte, M., Pagant, S. et sc H., H. newblock (2003). newblock Classification and identification of arabidopsis cell wall mutants using fourier transfrom infrared (FT-IR) microspectroscopy. newblock The Plant J. newblock 393--404. 
+
+[Robin et al. (2003b)]RLH03 Robin, S., Lecomte, M., Höfte, H. et Mouille, G. newblock (2003). newblock A procedure for the clustering of cell wall mutants in the model plant arabidopsis based on fourier-transform infrared (FT-IR) spectroscopy. newblock J. Appl. Statist.. newblock 30 (6) 669--681. 
+
+[Bacro et al. (2002)]BDM02 Bacro, J.-N., Daudin, J.-J., Mercier, S. et Robin, S. newblock (2002). newblock Back to the local score in the logarithmic case: a direct and simple proof. newblock Ann. Inst. Statist. Math. newblock 54 748--757. 
+
+[Robin et al. (2002)]RDR02 Robin, S., Daudin, J.-J., Richard, H., Sagot, M.-F. et Schbath, S. newblock (2002). newblock Occurrence probability of structured motifs in random sequences. newblock J. Comp. Biol. newblock 9 761--773. 
+
+[Nuel et al. (2001a)]NRB01 Nuel, G., Robin, S. et Baril, C. newblock (2001a). newblock Predicting phenotypic distances using a linear model: the case of varietal distinctness. newblock J. Appl. Statist. newblock 28 (5) 607--621. 
+
+[Nuel et al. (2001b)]NBR01 Nuel, G., Baril, C. et Robin, S. newblock (2001b). newblock Varietal distinctness assisted by molecular markers: A methodological approach. newblock Acta Horticulturae. newblock 546 65--71. 
+
+[Robin et Daudin (2001)]RoD01 Robin, S. et Daudin, J.-J. newblock (2001). newblock Exact distribution of the distances between any occurrences of a set of words. newblock Ann. Inst. Statist. Math. newblock 36 (4) 895--905. 
+
+[Robin et Schbath (2001)]RoS01 Robin, S. et Schbath, S. newblock (2001). newblock Numerical comparison of several approximations of the word count distribution in random sequences. newblock J. Comp. Biol. newblock 8 (4) 349--359. 
+
+[Sekowska et al. (2001)]SRD01 Sekowska, A., Robin, S., Daudin, J.-J., Hénaut, A. et Danchin, A. newblock (2001). newblock Extracting biological information from dna arrays: an unexpected link between arginine and methionine metabolism in bacillus subtilis. newblock Genome Biology. newblock 2 (6) genomebiology.com/2001/2/6/research/0019.1. 
+
+[Demotes-Mainard et al. (1999)]DJR99 Demotes-Mainard, S., Jeuffroy, M.-H. et Robin, S. newblock (1999). newblock Spike dry matter and nitrogen accumulation before anthesis in wheat as affected by nitrogen fertilizer: relationship to kernels per spike. newblock Field Crop Research. newblock 64 249--259. 
+
+[Robin (1999c)]Rob99 Robin, S. newblock (1999). newblock A model for thermograms. newblock Biometrics. newblock 55 (1) 37--43. 
+
+[Robin et Daudin (1999)]RoD99 Robin, S. et Daudin, J.-J. newblock (1999). newblock Exact distribution of word occurrences in a random sequence of letters. newblock J. Appl. Prob. newblock 36 179--193. 
+
+[Sahli et al. (1997)]STR97 Sahli, A., Trécourt, P. et Robin, S. newblock (1997). newblock One sided acceptance sampling by variables: the case of the Laplace distribution. newblock Commun. Statist. - Theory Meth. newblock 26 (11) 2817--2834. 
+
+[Robin (1996b)]Rob96 Robin, S. newblock (1996). newblock Sensitivity analysis of non-parametric tests for censored data. newblock Commun. Statist. - Theory Meth. newblock 25 (8) 1693--1715. 
+
+ 
+
+ SRConférences invitées. Subsubsec:ConfInvit  Predicting phenotypic distances through molecular data: Electrophoresis (Rouen, 1999). Analyse statistique des données issues de biopuces, Journées de la Société Française de Statistique (Bruxelles, 2002) Some Statistical Problems in Microarray Data Analysis: 26th Annual Conference of the Gesellschaft für Klassifikation (Mannheim, Allemagne, 2002). Répartition de motifs dans des séquences d'ADN, Journées de la Société Française de Statistique (Lyon, 2003) Analyzing Motifs Distribution in DNA Sequences: Theme Conference of the Royal Statistical Society on Statistical Genetics and Bioinformatics (Diepenbeck, Belgique, 2003).  
+
+ Synthèses scientifiques 
+
+SRDans des périodiques sans comité de lecture.  [Robin (2003b)]Rob03b Robin, S. newblock (2003). newblock La juste mesure des g`enes. newblock La Recherche. newblock (363) 90--91.  
+
+
+
+SRChapitres d'ouvrage.  [Mary-Huard et al.]MPR05 Mary-Huard, T., Picard, F. et Robin, S. newblock Introduction to statistical methods for microarray data analysis. newblock à paraître. 
+
+[Doumas et al. (2004)]MoB04 Doumas, P., Rothan, C. et Robin, S. newblock (2004). newblock La génomique en biologie végétale. newblock (J.-F. Morot-Gaudry et J.-F. Briat, ed.), chapitre Analyse du transcriptome végétal pas les puces à ADN, 155--182. newblock Science update. INRA. 
+
+[Martin-Magnette et Robin (2004)]MMR04 Martin-Magnette, M.-L. et Robin, S. newblock (2004). newblock Informatique pour l'analyse du transcriptome. newblock chapitre Techniques statistique pour l'analyse du transcriptome. newblock Hermès. 
+
+[Robin (2003a)]Rob03a Robin, S. newblock (2003). newblock Between Data Science And Applied Data Analysis. newblock (S. Martin, W. Gaul, et M. Vichi, ed.), chapitre Some Statistical Issues in Microarray Data Analysis, 337--347. newblock Springer. 
+
+
+
+ 
+
+SROuvrages.  [Robin et al. (2005)]RRS05 Robin, S., Rodolphe, F. et Schbath, S. newblock (2005). newblock DNA, words and models. newblock Cambridge University Press, à paraître. [Robin et al. (2003a)]RRS03 Robin, S., Rodolphe, F. et Schbath, S. newblock (2003). newblock ADN, mots et modèles. newblock Echelles. Belin.  
+
+ Documents à vocation de transfert  
+
+ Travaux personnels 
+
+SROuvrage.  [Daudin et al. (1999)]DRV99 Daudin, J.-J., Robin, S. et Vuillet, C. newblock (1999). newblock Statistique inférentielle: Idées, démarches, exemples. newblock Société Française de Statistique. Presses Universitaires de Rennes.  
+
+SRPolycopiés et supports de cours.  [Lebarbier et Robin (2004)]LR-ExModLin Lebarbier, E. et Robin, S. newblock (2004). newblock Exemples d'applications du modèle linéaire. newblock 129p. 
+
+[Robin (2003c)]R-Biopuces Robin, S. newblock (2003). newblock Statistical analysis of microarray data. newblock 63p. 
+
+[Duby et Robin (2001)]DR-ACP Duby, C. et Robin, S. newblock (2001). newblock Analyse en composantes principales. newblock 70p. 
+
+[Doursat et Robin (1999)]DR-SimRV Doursat, C. et Robin, S. newblock (1999). newblock Simulating random values. newblock INA PG. 
+
+[Pommiès et Robin (1999)]PR-CM Pommiès, E. et Robin, S. newblock (1999). newblock Introduction aux chaînes de markov homogènes. newblock 65p. 
+
+[Robin (1999a)]R-CSAGAD Robin, S. newblock (1999). newblock Cours de statistique du CSAGAD. newblock 200p. 
+
+[Robin (1999b)]R-Attente Robin, S. newblock (1999). newblock Introduction aux files d'attente. newblock 35p. 
+
+[Robin (1999d)]R-Poisson Robin, S. newblock (1999). newblock Processus de poisson, introduction aux processus de naissances et morts. newblock 22p. 
+
+[Robin (1998)]R-ModLin Robin, S. newblock (1998). newblock Rappels et compléments sur le modèle linéaire. newblock 17p. 
+
+[Daudin et al. (1996)]DDRT-Chrono Daudin, J.-J., Duby, C., Robin, S. et Trécourt, P. newblock (1996). newblock Analyse des séries chronologiques. newblock 70p. 
+
+[Robin (1996a)]R-CompPop Robin, S. newblock (1996). newblock Comparaison de populations. newblock 68p. 
+
+ 
+
+ Travaux encadrés 
+
+SRMémoires de stage de DEA, DAA, DESS et Master. Subsec:Stages  [Analyse de biopuces:] Ph. Hupé, F. Picard et T. Mary-Huard (2002), E. Haon-Lasporte (2004) [Classification et FT-IR:] M. Lecomte (2001) [Occurrences de motifs:] C. Jubin (1999), H. Richard (2000) et S. Ledent (2001) [Distinction variétale:] G. Nuel (1998), N. Legall (1999) [Analyse de thermogrammes:] G. Bourguignon (1992), E. Gautherat (1995), D. Belhaj (1995)  
+
+Local Variables: mode: latex TeX-master: "Dossier-DR2" 

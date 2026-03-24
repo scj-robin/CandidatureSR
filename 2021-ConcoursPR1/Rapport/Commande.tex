@@ -1,0 +1,65 @@
+% Biblio 
+\usepackage{bibtopic} 
+\newcommand{\subbib}[2]{\begin{btSect}{#1}
+  \subsubsection{#2}
+  \btPrintCited
+  \btPrintNotCited
+  \end{btSect}
+}
+\newcommand{\SubBib}[2]{\begin{btSect}{#1}
+  \chapter{#2}
+  \btPrintCited
+  \btPrintNotCited
+  \end{btSect}
+}
+
+% \DeclareRobustCommand{\etalchar}
+
+% Texte et mise en forme
+%\usepackage{natbib}
+\usepackage{amsmath,amsfonts,amssymb}
+% \usepackage{astats}
+\usepackage[T1]{fontenc}
+% \usepackage[utf8]{inputenc}
+\usepackage[french]{babel}
+\usepackage{enumerate}
+\usepackage{eurosym}
+\usepackage{epsfig}
+\usepackage{url}
+\usepackage{color}
+\usepackage{xcolor}
+\usepackage{xspace}
+\usepackage{cmbright}
+\usepackage{tikz}
+
+% Rq
+\newcommand{\SR}[2]{\textcolor{blue}{SR~:\xspace}\textcolor{gray}{#1\xspace}\textcolor{red}{#2\xspace}}
+\newcommand{\citej}[1]{\cite{#1}$^*$}
+\newcommand{\Col}[1]{\noindent [{\sl Collab. princip.~: #1}]\\}
+\newcommand{\APT}{AgroParisTech\xspace}
+\newcommand{\UMRlong}{UMR MIA-Paris \APT~-~INRA~-~Paris-Saclay\xspace}
+\newcommand{\UMRcourt}{UMR MIA-Paris\xspace}
+\newcommand{\SU}{Sorbonne Université\xspace}
+\newcommand{\SG}{{Statistique \& Génome}\xspace}
+\newcommand{\todo}{\xspace\textcolor{red}{\bf TO DO}\xspace}
+
+% Mise en page, marges
+\textwidth 17cm
+\textheight 25.5cm 
+\topmargin -2 cm 
+\oddsidemargin -0.5 cm
+\evensidemargin -0.5 cm
+
+% TikZ
+\newcommand{\ns}{2em}
+\newcommand{\veu}{2*\ns} % vertical edge unit
+\newcommand{\heu}{2.5*\ns} % horizontal edge unit
+\tikzstyle{hidden}=[draw, circle, fill=gray!50, minimum width=\ns, inner sep=0]
+\tikzstyle{observed}=[draw, circle, minimum width=\ns, inner sep=0]
+\tikzstyle{observedcond}=[draw=gray!80, circle, minimum width=\ns, inner sep=0, text=gray!80]
+\tikzstyle{eliminated}=[draw, circle, minimum width=\ns, color=gray!80, inner sep=0]
+\tikzstyle{empty}=[]
+\tikzstyle{arrow}=[->, >=latex, line width=1pt]
+\tikzstyle{edge}=[-, line width=1pt]
+\tikzstyle{condedge}=[-, line width=1pt]
+\tikzstyle{lightarrow}=[->, >=latex, line width=1pt, fill=gray!80, color=gray!80]

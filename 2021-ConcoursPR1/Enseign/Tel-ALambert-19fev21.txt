@@ -1,0 +1,71 @@
+********************************************************************************
+Amaury Lambert et resp UFR Sami Mustapha : 
+
+1 ECTS = 6h, 1 cours = 6 ECTS
+
+* UE L1 Math-Info (9 ECTS) : sciences des données (Anna Bonnet, Maud Thomas = 24h eqTD)
+
+* Rescuciter filière biostat ISUP (Olivier Lopez, Gérard Biau : lui mettre un mail pour voir s'il y aurait des enseignements à y monter et idem pour le M2 de stats : qui contacter ?)
+
+* Proposer un cours de M2 : cours de 2ème semestre (6 ECTS = 24h de cours magistral = 36h eqTD)
+
+* Cours ENS d'Amaury : la faire tourner pourquoi pas la reprendre
+
+********************************************************************************
+********************************************************************************
+Cours ENS
+********************************************************************************
+* Cours "Math 1" en L3 = 1ère année d'ENS, 1 cours de 3h par semaine pdt 2 mois (10 séances = 45h eqTD)
+A - Algèbre linéaire
+-> Déterminant, polynome caractéristique, diagonalisation
+-> Matrice positive (définie positive et à termes tous positives)
+B - Différentiabilité
+-> application linéaire tangente, matrice jacobienne
+-> extremum
+-> courbe paramétrée
+C - Equations différentielles
+-> Systèmes linéaires
+-> Différents types d'équilibres (en dim 1, puis en dimension supérieure)
+D - Probabilités
+-> Chaines de Markov (dt Perron Frobénius = cvgce en loi)
+
+* Cours "Math 2" en M1 = 2ème année d'ENS
+A - Notions fondamentales
+-> Topologie, convergence
+-> Théorie de la mesure
+-> Produit scalaire
+B - Séries de Fourrier
+-> Dont preuve du TCL
+C - Systèmes dynamiques
+-> Théorème ergodique
+-> Dont Lyapunov
+D - Proba
+-> Chaines de Markov en temps continu (générateur)
+-> Diffusion (sans calcul stochastique)
+E - Equations aux dérivées partielles
+-> Eqution de transport, équation de la chaleur
+
+********************************************************************************
+********************************************************************************
+Processus d'attribution des enseignements : 
+********************************************************************************
+* Tableau de service ouvert en juin
+* Membres emettent des voeux
+* Commission valide
+
+********************************************************************************
+********************************************************************************
+Enseignements LPSM
+********************************************************************************
+Master M2 Probabilités et Applications
+* Spécialité "Probabilités et Modèles Aléatoires"
+* Spécialité "Probabilités et Finance"
+
+Master M2 Statistiques
+
+Master Ingénierie mathématique
+
+Master IFMA (= V2 de "Probabilités et Finance")
+
+Voir aussi M2 Math-Bio (ex Perthame, LJLL)
+

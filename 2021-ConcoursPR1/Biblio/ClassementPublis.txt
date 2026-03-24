@@ -1,0 +1,22 @@
+-------------------------------------------------------------------------------
+Segmentation
+* Ruptures - segmentation : \cite{CLR18}, \cite{ScR17}, \cite{CLL17}, \cite{DLM17}, \cite{ClR16}, \cite{GCR16}, \cite{LDM14}, \cite{CKL14}, \cite{VBM13}, \cite{RLR11}, \cite{PLH11}, \cite{PLB11}, \cite{BMT09}, \cite{PRL07}, \cite{PRL05}
+* Ruptures - appli : \cite{VBG13}, \cite{CDR13}, \cite{MDP13}, \cite{RAB11}
+* Evolution : \cite{BAR18}, \cite{BMR17}
+
+-------------------------------------------------------------------------------
+Structure latente
+* Ruptures - HMM : \cite{WLA19}, \cite{VMR12}, \cite{BMB11}, \cite{NLR09}, \cite{MMB08
+* JSDM : \cite{CMR20}, \cite{CMR19}, \cite{CMR18a}
+* JSDM - appli : \cite{PFC20}, \cite{LCA20}, \cite{FHC20}, \cite{MMR19}
+* Epidémio : \cite{BSR19}
+* Réseaux - inférence : \cite{MRA20b}, \cite{MRA20}, \cite{SRS19}, \cite{CMR19}, \cite{RAR18}, \cite{ScR17}, \cite{ScR15}
+
+--------------------------------------------------------------------------------
+Réseaux 
+* Réseaux - topologie : \cite{ASR21}, \cite{OLR20}, \cite{LRO18}, \cite{LaR16}, \cite{MaR14}, \cite{CDR12}, \cite{GDR12}, \cite{MRV10}, \cite{PMD09}, \cite{DPR08}, \cite{DoR17}, \cite{DoR19}, \cite{LLR16 (auxine)
+* Réseaux - motifs : \cite{OLR21}, \cite{LaR16}, \cite{PDK08}, \cite{MSB06}, \cite{LeR05}, \cite{RDR02}, \cite{Rob02}, \cite{RoD01}, \cite{RoS01}
+
+--------------------------------------------------------------------------------
+* Evolution : \cite{MHR20}
+

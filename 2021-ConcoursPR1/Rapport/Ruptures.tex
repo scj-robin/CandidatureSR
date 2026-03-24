@@ -1,0 +1,51 @@
+La détection de ruptures consiste en la recherche de changements abrupts dans la distribution d'un signal observé au cours du temps (ou de toute autre structure linéaire). Mes premiers travaux dans ce domaine ont été motivés par la détection de variations du nombre de copies le long du génome, qui est centrale dans la compréhension de maladies telles que le cancer \cite{VBG13}. 
+
+Les modèles de segmentation présentent la particularité de combiner des paramètres de types continus (par exemples les moyennes et variances du signal à chaque position, noté $\theta$) et des paramètres discrets (nombre et localisation des ruptures, noté $T$). L'estimation de ces derniers induit des problèmes combinatoires, puisque il s'agit d'explorer de façon efficace l'espace dans lequel ils vivent. 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\paragraph{Ruptures dans un signal.}
+\Col{S. Chakar, A. Cleynen, E. Lebarbier, C. Lévy-Leduc, F. Picard, G. Rigaill}
+La localisation des points de ruptures le long d'un signal unidimensionnel est un exemple emblématique puisque le nombre de segmentations possibles croît exponentiellement avec la longueur de ce signal. La segmentation maximisant la vraisemblance peut cependant être obtenue via un algorithme de type programmation dynamique de complexité quadratique $O(n^2)$. Cette approche peut s'appliquer à l'étude des variations du nombre de copies \cite{PRL05}, pour peu que la log-vraisemblance soit additive par rapport aux segments, ce qui est vrai sous certaines hypothèses d'indépendance. La programmation dynamique peut alors se combiner avec un algorithme de type 'espérance-maximisation' (EM: voir section \ref{sec:latentes}) pour proposer une annotation des segments, c'est-à-dire préciser quelles régions chromosomiques présentent un nombre normal de copies, ou au contraire un excès ou une perte \cite{PRL07}.
+
+\bigskip
+La log-vraisemblance peut cependant ne pas être additive, comme dans le cas d'un signal de type autorégressif. Dans sa thèse, S. Chakar a proposé une technique robuste de blanchiment du signal qui permet de bénéficier de l'efficacité algorithmique de la programmation dynamique tout en conservant les propriétés statistiques souhaitables (notamment la consistance de la localisation des points de ruptures) \cite{CLL17}.
+
+\bigskip
+Enfin, la complexité quadratique de la programmation dynamique peut s'avérer excessive pour des signaux de très grande dimension comme les signaux issus de séquençage massif du génome ($n \simeq 10^6-10^8$). Une partie du travail de thèse de G. Rigaill a consisté à concevoir une version élaguée de l'algorithme de programmation dynamique, dont la complexité moyenne est en $O(n \log n)$, ce qui constitue une réduction drastique du temps de calcul. A. Cleynen a montré que cette procédure d'élagage peut être étendue à la loi binomiale négative, utilisée pour les données de séquençage \cite{CDR13, CKL14}.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\paragraph{Inférence bayésienne ``exacte''.} 
+\Col{A. Cleynen, E. Lebarbier, G. Rigaill}
+L'algorithme de progammation dynamique qui permet d'obtenir la segmentation du maximum de vraisemblance est l'équivalent pour l'algèbre 'max-somme' d'un produit de matrice pour l'algèbre 'somme-produit'. Cette observation permet d'envisager la détection de ruptures dans une cadre bayésien, dans lequel il ne s'agit plus de maximiser, mais d'intégrer sur l'espace des segmentations afin d'obtenir la loi {\sl a posteriori} $p(T | Y)$, en notant $Y$ le signal observé. La thèse de G. Rigaill a permis de démontrer qu'il est possible d'obtenir des intervalles de crédibilité pour la position des ruptures avec la même complexité algorithmique que la programmation dynamique \cite{RLR11}, et ce, sans recourir à aucune étape d'échantillonnage de type Monte-Carlo. %D'un point de vue méthodologique, ce résultat est un exemple d'interaction fructueuse entre algèbre et probabilités, la première permettant d'effectuer une intégration sur l'espace des paramètres discrets et les secondes une intégration sur l'espace des paramètres continus. 
+
+\bigskip
+Le problème de l'intégration sur l'espace des segmentations étant résolu, on peut traiter de façon exacte toute une série d'autres problèmes. On peut ainsi établir un critère de sélection de modèle exact, au sens où il ne recourt à aucune approximation comme les critères classiques tels que AIC ou BIC \cite{RLR11}. A. Cleynen a notamment  proposé une méthode bayésienne de comparaison des positions des points de rupture entre différentes séries. \cite{ClR16} étudie ainsi les variations, en fonction de conditions de culture, des limites des régions transcrites chez la levure. Cette approche a été ensuite (grandement) étendue par L. Schwaller qui s'est intéressé à l'inférence  bayésienne de modèles impliquant des paramètres discrets plus complexes (cf \cite{ScR17} et section \ref{sec:latentes}).
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\paragraph{Analyse conjointe de plusieurs signaux.}
+\Col{E. Lebarbier, F. Picard}
+La détection peut également porter sur un ensemble de signaux qu'on souhaite analyser conjointement. Si on suppose que les ruptures sont communes à tous les signaux, on est ramené à un problème de même complexité que si on observait un seul profil (multivarié). Cette hypothèse est cependant rarement vérifiée et l'analyse conjointe vise alors essentiellement à mutualiser l'information entre les profils afin d'améliorer la segmentation de chacun.
+
+\bigskip
+Les modèles de segmentation portant sur la moyenne des observations peuvent être vus comme une instance particulière du modèle linéaire, dans lequel la matrice des régresseurs est elle-même inconnue. Cette observation permet d'écrire un modèle conjoint de segmentation prenant en compte, par exemple, un effet spécifique à chaque point de mesure (comme l'efficacité d'hybridation de la sonde associée à chaque locus). Selon que de tels effets sont supposés fixes ou aléatoires, on peut proposer une procédure itérative de type moindres carrés \cite{PLH11} ou un algorithme de type EM \cite{PLB11}. Le caractère générique de ce modèle le rend pertinent pour des domaines d'application très différents, comme l'homogénéisation de séries climatiques \cite{MDP13}.
+
+\bigskip
+On peut étendre ce modèle en prévoyant explicitement une corrélation entre les profils à chaque point de mesure. Là encore, on peut définir un algorithme de type EM qui permet d'en effectuer l'inférence \cite{CLR18}. La modélisation de la corrélation au moyen d'un modèle à facteurs permet de se ramener à un contraste additif (donc optimisable rapidement) à chaque étape de segmentation puis de mettre à jour les autres paramètres avant une nouvelle étape de segmentation.
+
+\bigskip
+L'analyse conjointe de plusieurs signaux génomiques amène naturellement à la recherche d'altérations trop fréquemment observées dans une population de patients atteints d'une même maladie. D'un point de vue de probabilités appliquées, ce problème peut se poser comme un problème d'excursion d'un processus markovien à valeurs discrètes et à temps discret ou continu, qui peut se résoudre par des techniques de séries génératrices \cite{RoS09, RoS13}.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\paragraph{Segmentation de structures plus complexes.} 
+\Col{P. Bastide, E. Lebarbier, C. Levy-Leduc, M. Mariadassou, T. Mary-Huard}
+Les problèmes de segmentation émergent naturellement dans l'analyse de signaux organisés le long d'une dimension. Les algorithmes efficaces qui y sont associés profitent grandement de cette structure et se fondent tous, bon an mal an, sur une ou plusieurs récurrences le long du signal. Cette propriété est évidemment perdue quand le signal ne se présente pas sous la forme d'une suite d'observations. 
+%Ainsi, les problèmes de segmentation sont nombreux en analyse d'image, mais il n'existe pas d'algorithme efficace permettant de les résoudre exactement (sauf à relaxer le problème d'optimisation).
+
+\bigskip
+Les technologies de capture de conformation de chromosome permettent de mesurer les interactions entre régions chromosomiques au sein de la cellule. Les données prennent alors la forme d'une matrice $n \times n$ ($n$ étant le nombre de locus) dans laquelle il s'agit de détecter des blocs de valeurs élevées, révélant les interactions entre régions chromosomiques. Il s'agit donc d'un problème de segmentation bidimensionnel. On peut cependant montrer que la détection de région de forte compacité de la chromatine se ramène à un problème unidimensionnel de détection de blocs le long de la diagonale, qui peut être traité efficacement \cite{LDM14}. 
+
+Une astuce analogue permet de rechercher des régions chromosomiques réunissant des gènes co-régulés, en recherchant des blocs diagonaux dans la matrice de corrélation. Une corrélation observée peut cependant résulter d'un autre mécanisme que la co-régulation, comme une variation locale du nombre de copies. On montre dans \cite{DLM17} qu'on peut détecter de telles régions, correction faite d'éventuelles variations du nombre de copies. Parmi les régions ainsi identifiées, certaines se sont avérées associées à une méthylation locale de l'ADN.
+
+\bigskip
+Enfin, on peut s'intéresser à la détection de ruptures dans la distribution d'un processus évoluant le long des branches d'un arbre. La thèse de P. Bastide portait ainsi sur la détection de sauts adaptatifs dans l'évolution d'un trait quantitatif courant le long d'un arbre phylogénétique. Il s'avère que pour le modèle le plus simple (mouvement brownien), le problème de localisation des sauts est en fait trivial et que pour le  modèle d'Ornstein-Uhlenbeck, plus utilisé en pratique, il est possible de se ramener au cas brownien au prix d'une déformation de l'arbre \citej{BMR17}. La méthode peut être étendue à l'étude de l'évolution de plusieurs traits corrélés \cite{BAR18}.
+

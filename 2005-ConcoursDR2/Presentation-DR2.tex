@@ -1,0 +1,404 @@
+\documentclass[dvips, lscape]{foils}
+%\documentclass[dvips, french]{slides}
+
+% Mise en page
+\textwidth 18.5cm
+\textheight 25cm 
+\topmargin -1cm 
+\oddsidemargin  -1cm 
+\evensidemargin  -1cm
+%\renewcommand{\baselinestretch}{0.7}  
+
+% Maths
+\usepackage{amsfonts, amsmath, amssymb}
+
+\newcommand{\coefbin}[2]{\left( 
+    \begin{array}{c} #1 \\ #2 \end{array} 
+  \right)}
+\newcommand{\bbullet}{\bullet\bullet}
+\newcommand{\bbbullet}{\bbullet\bullet}
+\newcommand{\bbbbullet}{\bbbullet\bullet}
+\newcommand{\Bcal}{\mathcal{B}}
+\newcommand{\Ccal}{\mathcal{C}}
+\newcommand{\Dcal}{\mathcal{D}}
+\newcommand{\Ecal}{\mathcal{E}}
+\newcommand{\Mcal}{\mathcal{M}}
+\newcommand{\Ncal}{\mathcal{N}}
+\newcommand{\Pcal}{\mathcal{P}}
+\newcommand{\Lcal}{\mathcal{L}}
+\newcommand{\Tcal}{\mathcal{T}}
+\newcommand{\Ucal}{\mathcal{U}}
+\newcommand{\alphabf}{\mbox{\mathversion{bold}{$\alpha$}}}
+\newcommand{\betabf}{\mbox{\mathversion{bold}{$\beta$}}}
+\newcommand{\gammabf}{\mbox{\mathversion{bold}\newcommand{\psibf}{\mbox{\mathversion{bold}{$\psi$}}}
+{$\gamma$}}}
+\newcommand{\mubf}{\mbox{\mathversion{bold}{$\mu$}}}
+\newcommand{\psibf}{\mbox{\mathversion{bold}{$\psi$}}}
+\newcommand{\Sigmabf}{\mbox{\mathversion{bold}{$\Sigma$}}}
+\newcommand{\taubf}{\mbox{\mathversion{bold}{$\tau$}}}
+\newcommand{\thetabf}{\mbox{\mathversion{bold}{$\theta$}}}
+\newcommand{\Dbf}{{\bf D}}
+\newcommand{\Ebf}{{\bf E}}
+\newcommand{\Hbf}{{\bf H}}
+\newcommand{\Ibf}{{\bf I}}
+\newcommand{\Sbf}{{\bf S}}
+\newcommand{\mbf}{{\bf m}}
+\newcommand{\ubf}{{\bf u}}
+\newcommand{\vbf}{{\bf v}}
+\newcommand{\xbf}{{\bf x}}
+\newcommand{\Xbf}{{\bf X}}
+\newcommand{\Esp}{{\mathbb E}}
+\newcommand{\Corr}{{\mathbb C}\mbox{orr}}
+\newcommand{\Var}{{\mathbb V}}
+\newcommand{\Ibb}{{\mathbb I}}
+\newcommand{\Rbb}{\mathbb{R}}
+
+% Couleur et graphiques
+\usepackage{color}
+\usepackage{graphics}
+\usepackage{epsfig} 
+\usepackage{pstcol}
+
+% Texte
+\usepackage{lscape}
+%\usepackage{../../../../Latex/fancyheadings, rotating, enumerate}
+\usepackage{../../../Latex/fancyheadings, rotating, enumerate}
+%\usepackage[french]{babel}
+\usepackage[latin1]{inputenc}
+%\definecolor{darkgreen}{cmyk}{0.5, 0, 0.5, 0.5}
+%\definecolor{green}{cmyk}{0.5, 0, 0.5, 0.5}
+\definecolor{orange}{cmyk}{0, 0.6, 0.8, 0}
+\definecolor{jaune}{cmyk}{0, 0.5, 0.5, 0}
+\newcommand{\textblue}[1]{\textcolor{blue}{#1}}
+\newcommand{\textred}[1]{\textcolor{red}{#1}}
+\newcommand{\textgreen}[1]{\textcolor{green}{ #1}}
+\newcommand{\textlightgreen}[1]{\textcolor{green}{#1}}
+%\newcommand{\textgreen}[1]{\textcolor{darkgreen}{#1}}
+\newcommand{\textorange}[1]{\textcolor{orange}{#1}}
+\newcommand{\textyellow}[1]{\textcolor{yellow}{#1}}
+\newcommand{\refer}[2]{{\sl #1}}
+
+% Sections
+%\newcommand{\chapter}[1]{\centerline{\LARGE \textblue{#1}}}
+% \newcommand{\section}[1]{\centerline{\Large \textblue{#1}}}
+% \newcommand{\subsection}[1]{\noindent{\Large \textblue{#1}}}
+% \newcommand{\subsubsection}[1]{\noindent{\large \textblue{#1}}}
+% \newcommand{\paragraph}[1]{\noindent {\textblue{#1}}}
+% Sectionsred
+\newcommand{\chapter}[1]{
+  \addtocounter{chapter}{1}
+  \setcounter{section}{0}
+  \setcounter{subsection}{0}
+  {\centerline{\LARGE \textblue{\thechapter~-~#1}}}
+  }
+\newcommand{\section}[1]{
+  \addtocounter{section}{1}
+  \setcounter{subsection}{0}
+  {\centerline{\Large \textblue{#1}}}
+  }
+\newcommand{\subsection}[1]{
+  \addtocounter{subsection}{1}
+  {\noindent{\large \textblue{#1}}}
+  }
+\newcommand{\paragraph}[1]{\noindent{\textblue{#1}}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\landscape
+\newcounter{chapter}
+\newcounter{section}
+\newcounter{subsection}
+\setcounter{chapter}{0}
+\headrulewidth 0pt 
+\pagestyle{fancy} 
+\cfoot{}
+\rhead{\begin{rotate}{90}{\hspace{1cm}\tiny \thepage}\end{rotate}}
+
+\begin{center}
+  \textblue{\LARGE Concours de Directeur de Recherche}
+
+  \vspace{2cm}
+  \textblue{\Large de l'Institut National de la Recherche Agronomique}
+
+  \vspace{2cm}
+  \textblue{\large Candidature de Stéphane Robin}
+
+%  \vspace{2cm}
+  Professeur à l'Institut National Agronomique Paris - Grignon (INA~PG)
+\end{center}
+
+\vspace{1.5cm}
+\paragraph{1 - Profil et parcours}
+
+\bigskip
+\paragraph{2 - Thèmes de recherche}
+
+\bigskip
+\paragraph{3 - Projet}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage 
+\chapter{Profil et expérience}
+
+% \bigskip
+% \section{État civil et formation}
+
+\bigskip\bigskip
+Stéphane Robin, 39 ans, Marié, 3 enfants
+
+\bigskip\bigskip
+\subsection{Profil de statisticien}
+\begin{itemize}
+\item École Nationale de la Statistique et de l'Administration
+  Économique (ENSAE)
+\item DEA de Statistique de l'Université Paris VI - P. \& M. Curie~: 1989
+\item Doctorat en Statistique de l'Université Paris V - René Descartes~:
+  1993
+\item Habilitation à Diriger des Recherches en Mathématiques de
+  l'Université d'Évry - Val d'Essonne~: 2002
+\end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage
+\section{Parcours professionnel}
+
+\subsection{Carrière d'enseignant}
+\vspace{-0.5cm}
+\begin{itemize}
+\item Assistant d'Enseignement et de Recherche Contractuel (1991),
+  Maître de Conférences (1994) puis Professeur (2003) à l'INA~PG
+  \vspace{-0.5cm}
+\item Enseignement à l'INA~PG, dans les DEA cohabilités (Paris VI,
+  Paris XI, ENS), à Supélec\vspace{-0.5cm}
+\item Étudiants~: biologistes, agronomes, bioinformaticiens,
+  mathématiciens
+\end{itemize}
+
+\subsection{Détachement à l'INRA}
+\vspace{-0.5cm}
+\begin{itemize}
+\item Auprès de l'unité Mathématique, Informatique et Génome en 2000 -
+  01
+\end{itemize}
+
+\subsection{Responsabilités au sein de l'UMR INA-PG / ENGREF / INRA}
+\vspace{-0.5cm}
+\begin{itemize}
+%\item UMR 518~: Mathématiques et Informatique Appliquées
+\item Responsable de l'équipe ``Statistique et Génome'' depuis 2002
+\vspace{-0.5cm}
+\item Directeur de l'UMR depuis 2004 (évaluation en 2005)
+\end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage
+\chapter{Thèmes de recherche}
+
+\bigskip
+\subsection{Méthodes statistiques pour la biologie moléculaire}
+
+\paragraph{Motif dans les séquences}
+\vspace{-0.5cm}
+\begin{itemize}
+\item Détection de motifs fonctionnels (ex.~: sites promoteurs)
+  %\vspace{-0.5cm}
+\item Étude de leur répartition le long de la séquence
+\end{itemize}
+
+\paragraph{Données de biopuces ({\sl microarrays})}
+\vspace{-0.5cm}
+\begin{itemize}
+\item Normalisation (détection et quantification de ``biais'',
+  correction éventuelle) %\vspace{-0.5cm}
+\item Recherche de gènes différentiellement exprimés et comparaisons
+  multiples
+%\vspace{-0.5cm}
+\item Recherche de (groupes de) gènes pertinents pour prédire le statut
+  d'un patient
+%\vspace{-0.5cm}
+\item Recherche de régions chromosomiques amplifiées ou manquantes par
+  puces CGH
+\end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage
+% \paragraph{Réseaux d'interaction}
+% \vspace{-0.5cm}
+% \begin{itemize}
+% \item Modélisation de graphes d'interaction\vspace{-0.5cm}
+% \item Recherche de motifs dans des réseaux
+% \end{itemize}
+
+\subsection{Mais aussi}
+
+\paragraph{Théorie statistique}
+\vspace{-0.5cm}
+\begin{itemize}
+\item Tests multiples, apprentissage, graphes aléatoires
+\end{itemize}
+
+
+\paragraph{Spectroscopie infra-rouge}
+\vspace{-0.5cm}
+\begin{itemize}
+\item Caractérisation de mutants par analyse de la paroi végétale
+\vspace{-0.5cm}
+\item Analyse de la composition de la paroi le long de la racine
+\end{itemize}
+
+\paragraph{Distinction variétale}
+\vspace{-0.5cm}
+\begin{itemize}
+\item Prédiction de distances phénotypiques à partir de données
+  moléculaires
+\vspace{-0.5cm}
+\item Réduction du dispositif expérimental
+\end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage
+\chapter{Projet}
+
+\bigskip
+\section{Enjeux pour la biologie (moléculaire)}
+
+\subsection{Tendance}% lourde}
+\vspace{-0.5cm}
+\begin{itemize}
+\item Les technologies modernes rendent la biologie de plus en plus
+  quantitative\vspace{-0.5cm}
+\item Les biologistes se trouvent confrontés à des masses de données
+  impossibles à analyser ``à la main'' et à interpréter ``à l'oeil''
+\vspace{-0.5cm}
+\item Ces données sont souvent extrêmement variables
+\end{itemize}
+
+\noindent $\Rightarrow$ La modélisation (informatique, mathématique,
+statistique) est incontournable pour tirer une information pertinente
+des données observées, voire pour bien poser les questions
+biologiques %\vspace{-0.5cm}
+
+\noindent Mais les outils pertinents ne sont pas forcément nouveaux 
+
+\paragraph{$\Rightarrow$ Besoin de (statisticiens) modélisateurs}
+capables de 
+\vspace{-0.5cm}
+\begin{itemize}
+\item Comprendre les besoins et les questionnements des
+  biologistes\vspace{-0.5cm}
+\item De proposer des premières réponses fondées sur des
+  méthodes existantes
+\vspace{-0.5cm}
+\item De développer de nouvelles méthodes si besoin est
+\end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage
+\section{Statistiques pour la biologie moléculaire}
+
+\subsection{Au sein de l'équipe ``Statistique et Génome''}
+\vspace{-0.5cm}
+\begin{itemize}
+\item Collaborations avec des laboratoires de biologie~:
+  planification d'expériences, analyse des données\vspace{-0.5cm}
+\item Poursuite de thématiques bien établies (statistique de motifs,
+  analyse différentielle, {\em etc.})\vspace{-0.5cm}
+\item Développement de méthodes d'analyse pour de nouvelles
+  technologies (puces CGH, ChIP chip, {\em etc.})\vspace{-0.5cm}
+\item Outils d'analyse de réseaux d'interactions\vspace{-0.5cm}
+\item Développement d'outils statistiques dédiés aux données
+  abondantes~: apprentissage statistique
+\end{itemize}
+
+\paragraph{Animation / Diffusion}
+\vspace{-0.5cm}
+\begin{itemize}
+\item Ateliers ``Statistique et données post-génomiques'' (création
+  d'un GDR~?)  \vspace{-0.5cm}
+\item Projet de réseau de biostatisticiens et bioinformaticiens des
+  plates-formes du Réseau National des Génopoles
+\end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage
+\section{Modélisation statistique en biologie}
+
+\subsection{Au sein de l'UMR INA~PG / ENGREF / INRA}
+
+\paragraph{Unité composée au 2/3 d'enseignants~:} 
+\vspace{-0.5cm}
+\begin{itemize}
+\item Large culture disciplinaire par nécessité \vspace{-0.5cm}
+\item Habitude du dialogue inter-disciplinaire pour la formation des
+  ingénieurs de l'INA~PG et de l'ENGREF \vspace{-0.5cm}
+\item Spectre large de domaines d'application (biologie, génétique,
+  écologie, hydrologie, {\em etc.}) et de méthodes (statistique
+  classique / bayésienne)
+\end{itemize} 
+
+\paragraph{Mission d'animation autour de la modélisation aléatoire en
+  biologie~:}  
+\vspace{-0.5cm}
+\begin{itemize}
+\item Groupes de travail autour de thèmes précis~: modélisation du
+  risque et statistique bayésienne, statistique spatiale et génétique
+  des populations, apprentissage et données à haut débit, {\it etc.}
+  \vspace{-0.5cm}
+\item Tutorat de doctorants
+\end{itemize} 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage
+\section{Direction de l'UMR}
+
+\paragraph{Direction d'une unité $\neq$ Direction d'une équipe}
+\vspace{-0.5cm}
+\begin{itemize}
+\item Hétérogénéité thématique~: plus difficile de discuter ou
+  d'orienter les choix de recherche\vspace{-0.5cm}
+\item Hétérogénéité de fonctionnement (et de localisation) des
+  équipes%\vspace{-0.5cm}
+% \item Animation collective plus délicate du fait de l'éclatement
+%   géographique
+\end{itemize} 
+
+%\bigskip
+\centerline{$\rightarrow$ Apprentissage difficile dans le cadre d'un
+  mi-temps de recherche}  
+
+\bigskip
+\paragraph{Position privilégiée de l'UMR}
+\vspace{-0.5cm}
+\begin{itemize}
+\item Prochain rapprochement INA~PG / ENGREF très
+  probable\vspace{-0.5cm}
+\item 2 grandes écoles formant des ingénieurs des sciences du vivant
+  ... \vspace{0.5cm}\\
+... dont trop peu s'orientent vers la recherche\vspace{-0.5cm}
+\item L'unité doit jouer ce rôle d'interface entre formation et
+  recherche
+\end{itemize} 
+
+%\bigskip
+%\centerline{$\rightarrow$ Le directeur doit en être le moteur}  
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\end{document}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+

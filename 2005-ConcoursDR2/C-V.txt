@@ -1,0 +1,25 @@
+  Curriculum vitae   
+
+ État civil  
+
+ Stéphane ROBIN Né le 8 décembre 1965 à La Garenne Colombes (Hauts de Seine) Marié, trois enfants (2, 9 et 11 ans) Professeur de Mathématiques Appliquées et Biométrie à l'Institut National Agronomique Paris-Grignon (INA PG) Directeur de l'UMR INA PG / ENGREF / INRA (518) de Mathématiques et Informatique Appliquées Section 03 de la CNECA, qualifié en section CNU 26 Adresse: INA PG, département Organisation et Modélisation de l'Information et des Processus (OMIP), 16 rue Claude Bernard, 75005 Paris Tél.: 01.44.08.72.02, Fax: 01.44.08.16.66, E-mail: robin@inapg.inra.fr.  
+
+ Parcours professionnel  
+
+ [Septembre 1988 à juin 1990:] vacataire à l'université PARIS II, travaux dirigés (TD) de mathématiques et de statistique en première année de DEUG d'économie et d'administration économique et sociale (AES). Entre 3 et 6 heures par semaine. [Septembre 1989 à juin 1990:] ingénieur responsable des statistiques à la société SIGMUND spécialisée en psychologie quantitative: mise au point et étalonnage de tests de recrutement. Emploi à mi-temps en parallèle avec la première année de thèse. [Août 1990 à juillet 1991:] service national en tant que scientifique du contingent à la Direction du Personnel Militaire de l'Armée de Terre, Bureau Recrutement et Orientation, gestion de la base de données des engagés volontaires et édition d'états statistiques. [Septembre 1991 à décembre 1994:] Assistant d'Enseignement et de Recherche Contractuel au département Mathématique et Informatique de l'INA PG. [De décembre 1994 à août 1999:] Maître de Conférences à la chaire de Mathématiques de l'INA PG (titularisé en décembre 1995, 1ère classe depuis septembre 1997). [De septembre 1999 à août 2001:] Détachement auprès de l'unité Mathématique, Informatique et Génome (MIG) de l'INRA (Jouy-en-Josas). [Depuis septembre 2003:] Professeur de Mathématiques de l'INA PG.  Membre de la fonction publique depuis décembre 1994, enseignant depuis septembre 1991. 
+
+ Titres universitaires  
+
+ [ENSAE] (École Nationale de la Statistique et de l'Administration Économique) diplôme de Cadre de Gestion Statistique: juin 88. [DEA de Statistique] de l'université PARIS VI: mention bien (deuxième), juin 1989. [Doctorat en Statistique] de l'université PARIS V: << Analyse de sensibilité de tests non-paramétriques adaptés aux données censurées >> sous la direction de C. Huber (Université Paris V) soutenu en décembre 1993 (mention très honorable) devant un jury composé de  Pr J. Bretagnolle (Université Paris XI), Pr B. Bru (Université Paris V), Pr J.-J. Daudin (Institut National Agronomique Paris-Grignon), Pr C. Duby (Institut National Agronomique Paris-Grignon), rapporteur, Pr C. Gouriéroux (Centre de Recherche en Économie et Statistique Théoriques), Pr. C. Huber (Université Paris V), Dr T. Moreau (INSERM), rapporteur.  [Habilitation à Diriger des Recherches en Mathématiques] de l'université d'Évry: << Répartitions de motifs dans des séquences d'ADN >>, soutenue le 1er juillet 2002 devant un jury composé de  Pr J.-M. Azais (Université Paul Sabatier, Toulouse), rapporteur Pr C. Duby (Institut National Agronomique Paris-Grignon) Pr W. Ewens (University of Pennsylvania) Pr B. Prum (Université d'Évry - Val d'Essonne), rapporteur Dr F. Rodolphe (Institut National de la Recherche Agronomique), rapporteur Dr J.-L. Risler (CNRS / Université d'Évry - Val d'Essonne) Pr M. Vingron (Max Planck Institut für Moleculare Genetik)   
+
+ subsubsectionStages de formation et journées d'études  << Introduction au langage C >> en Janvier 1994 (3 jours) au département Mathématique et Informatique de l'INA PG. << Calcul formel pour les applications, utilisation du système Maple >> en Avril 1994 (3 jours) à l'INRIA. << Inférence non-paramétrique: les statistiques de rang >> en Octobre 1994 (5 jours) par le laboratoire de statistique et probabilités de l'université Paul Sabatier.  
+
+ subsubsectionLangues  Anglais: lu, écrit, parlé, niveau TOEFL, équivalence du DEUG; nombreux séjours. Allemand: niveau scolaire.  
+
+ Sociétés savantes  Membre de la Société Française de Statistique (SFdS) Membre de la Société Française de Biométrie (SFB) Membre de la Société de Mathématiques Appliquées & Industrielles (SMAI)  
+
+
+
+
+
+Local Variables: mode: latex TeX-master: "Dossier-DR2" 

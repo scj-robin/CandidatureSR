@@ -1,0 +1,92 @@
+\documentclass[12pt, a4paper, french]{article}
+
+\input{Commande.tex}
+% \renewcommand{\familydefault}{\sfdefault}
+% \renewcommand{\familydefault}{\rmdefault}
+
+%---------------------------------------------------------------------
+%---------------------------------------------------------------------
+
+% \title{Rapport d'activités}
+
+%---------------------------------------------------------------------
+%---------------------------------------------------------------------
+\begin{document}
+
+% \maketitle
+
+\noindent
+{\huge\bf Rapport d'activités}
+
+% Ce document est une trame pour vous aider à rédiger votre rapport d’activités. L’accent sera mis sur les activités depuis la dernière promotion, ou à défaut, depuis la nomination dans le corps. Les candidats sont invités à renseigner autant que possible les différentes rubriques.
+
+% La police de caractère utilisée pour rédiger le contenu des rubriques doit avoir une taille minimale de 12 points. L'organisation générale des rubriques doit être respectée. L'ensemble de cette partie rédactionnelle ne doit pas excéder 15 pages (hors annexes). Pour argumenter les items, il convient de ne pas se limiter à des listes.
+
+\bigskip
+\noindent
+\begin{tabular}{p{.4\textwidth}p{.5\textwidth}}
+% \begin{tabular}{ll}
+  \hline
+  Nom d'usage : {\sc Robin} & Prénom : Stéphane \\ 
+  \\
+  Corps : Professeur des universités & Grade : PR1 \\
+  \\
+  Discipline / section : 26 \\
+  \hline
+\end{tabular}
+
+% \tableofcontents
+
+%---------------------------------------------------------------------
+% \newpage
+\subsection*{Synthèse du parcours professionnel et contexte d’exercice} 
+\input{Synthese}
+
+%---------------------------------------------------------------------
+\section{Investissement pédagogique \label{sec:ens}}
+\input{Enseignement}
+
+\section{Activité scientifique \label{sec:rech}} 
+\input{Science}
+
+\section{Responsabilités collectives et d’intérêt général  \label{sec:col}} 
+\input{Collectif}
+
+% \section{Autres informations  \label{sec:autres} \todo{}}
+% \input{Autres}
+
+%---------------------------------------------------------------------
+\appendix \newpage
+
+\section{Tableau des enseignements \label{app:ens}}
+\input{AppEnseignements}
+
+\section{Liste classée des publications \label{app:pub}}
+\input{AppPublications}
+
+\section{Liste des direction et codirection de thèses  \label{app:phd}}
+\input{AppEncadrements}
+
+%---------------------------------------------------------------------
+%---------------------------------------------------------------------
+% \bibliography{/home/robin/Biblio/bibgene}
+% \bibliographystyle{/home/robin/LATEX/Biblio/astats}
+
+%---------------------------------------------------------------------
+%---------------------------------------------------------------------
+\end{document}
+%---------------------------------------------------------------------
+%---------------------------------------------------------------------
+
+
+\noindent\hspace{-.03\textwidth}
+\begin{tabular}{cc}
+  \begin{tabular}{p{.5\textwidth}}
+  xxx
+  \end{tabular}
+  &
+  \hspace{-.05\textwidth}
+  \begin{tabular}{p{.45\textwidth}}
+  \includegraphics[width=.5\textwidth, clip=]{../Figures/xxx}
+  \end{tabular}
+\end{tabular}

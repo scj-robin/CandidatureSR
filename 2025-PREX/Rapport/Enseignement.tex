@@ -1,0 +1,108 @@
+%---------------------------------------------------------------------
+\subsection{Présentation synthétique de l'activité d'enseignement}
+%---------------------------------------------------------------------
+% principaux enseignements en mettant l'accent sur les thématiques enseignées, les pratiques pédagogiques, les activités particulières : création d'un enseignement, transformation des enseignements. 
+
+L’enseignement a constitué pour moi l’enjeu principal de mon recrutement à \SU, d’une part parce que je quittais un statut de chercheur à plein temps et d’autre part parce que j’ai alors rejoint l’université où je n’avais enseigné qu’au niveau du M2 ou du doctorat.
+Mon retour vers l'enseignement constitue donc un choix et non un choix par défaut.
+Arrivé à ce point de ma carrière, j'apprécie de m'y consacrer pleinement, sans avoir le sentiment que le temps que j'y consacre entre en concurrence avec mes activités de recherche.
+
+%---------------------------------------------------------------------
+\subsection{Présentation des enseignements}
+%---------------------------------------------------------------------
+% faisant apparaître la catégorie de diplôme (national, universitaire), le niveau (LMD), le type de formation (formation initiale/continue, professionnelle, présentielle/à distance), la nature (cours magistraux, TP, TD, encadrement de travaux de fin d'étude et de stages), les effectifs, le volume horaire (ce descriptif sera complété sous la forme d'un tableau détaillé de présentation en annexe 1)
+
+Depuis mon arrivée à \SU, mon service d’enseignement se compose principalement de quatre UE :
+\begin{itemize}
+\item Sciences de Données en L1,
+\item Mathématiques pour les biologistes en L3,
+\item Modèles à variables latentes en écologie en M2,
+\item Inférence bayésienne et modèles markoviens en M2. 
+\end{itemize}
+J’interviens également dans les TD de l'UE “Statistique et mathématiques pour la biologie'' dispensée en L3 par l’UFR de biologie. 
+
+% Je fournis une description précise de ces différents enseignements à la section \ref{sec:ens}.
+
+%---------------------------------------------------------------------
+\paragraph{Sciences de Données (L1: 9 ECTS jusqu'en 2024, 8 ECTS depuis).}
+En collaboration avec J-N Vittaut (UFR d'informatique), j'ai créé ce cours en 2021-22, année de mon arrivée à \SU. En dehors des filières d'IUT et de BTS, il n'existait, à ma connaissance, pas de cours de Sciences des Données à destination des étudiants de première année universitaire. 
+
+L'objectif est de présenter des méthodes effectivement utilisées en sciences des données comme l'algorithme des $k$-means (qui vise à définir des groupes homogènes d'observations, sans information a priori) ou l'algorithme des $k$ plus proches voisins (ou '$k$nn' qui vise à prédire le statut binaire d'une observation à partir des statuts des observations qui lui sont le plus similaires). 
+
+Le cours est organisé en deux parties égales. La première porte sur les méthodes descriptives, qui ne visent qu’à décrire et interpréter les données disponibles, sans ambition de généralisation. C’est le cas de la classification dite non supervisée dont l’algorithme de $k$-means est un exemple. La seconde porte sur les méthodes inférentielles, qui visent à étendre des résultats à des données non encore observées. C’est le cas de la classification supervisée (dont l’algorithme des $k$nn est un exemple) Cette seconde partie constitue une toute première introduction à la statistique mathématique et nécessite le rappel et l'introduction de notions de probabilités (loi jointe, marginales conditionnelles, densité de probabilité).
+
+Le contenu de ce cours se fonde sur trois principes : éviter l'introduction de notions mathématiques nouvelles par rapport au programme de Terminale, définir et étudier formellement les propriétés de chaque méthode présentée (refuser les boîtes noires) et implémenter effectivement ces méthodes. Le cours est construit en 10 chapitres répartis sur 10 semaines. Chaque semaine est constituée d'un cours magistral d'1 h 45 présentant une question, une méthode pour y répondre et les propriétés de cette méthode, d'un TD de 2h en salle de classe proposant des exercices autour de la méthode et des deux séances de TME (travail sur machine encadré) de 2h lors desquelles la méthode est implémentée en python et appliquée à des exemples réels. Cette UE occupe donc les étudiants près de 8h par semaine au premier semestre.
+
+Cette UE est suivie chaque année par un peu plus de 300 étudiants, principalement issus du portail Math-Info. Comme tous les collègues intervenant en L1, je constate chaque année la très grande hétérogénéité des parcours des étudiants arrivant à \SU et la variabilité de leur compétence. Je constate notamment la fragilité des bases sur lesquelles une bonne part d’entre eux s’appuient. Je constate aussi l’investissement de la très grande majorité d’entre eux dans leurs études, ainsi que les efforts, pas toujours optimaux, qu’ils déploient. Une de mes objectifs est donc de les rassurer sur le fait qu’ils ont leur place à l’université et qu’ils peuvent effectivement poursuivre des études supérieures.
+
+%---------------------------------------------------------------------
+\paragraph{Mathématiques pour les biologistes (L3).}
+Ce cours officieusement intitulé “Ce qu'un biologiste doit savoir en mathématiques'' s'adresse aux étudiants de 1ère année de biologie de l'École Normale Supérieure (ENS) de la rue d’Ulm. Il a été initialement conçu par Amaury Lambert (alors professeur à \SU et aujourd'hui professeur à l'ENS) et vise à donner des bases solides en mathématiques à des étudiants qui se destinent majoritairement à l’enseignement et à la recherche. Il est constitué de quatre parties : algèbre linéaire, fonctions de plusieurs variables, équations différentielles ordinaires (et systèmes dynamiques) et probabilité (notamment processus markoviens).
+
+Ce cours prend la forme d’un cours de mathématiques traditionnel (définition, propositions et théorèmes, démonstrations) et est accompagné de quelques séances de travaux dirigés. Mon expérience de recherche à l’interface entre les mathématiques et les sciences du vivant me permet de motiver l’étude de ces notions par des problématiques récurrentes en sciences du vivant (modèles de dynamique de population, notion de paysage adaptatif, génétique des populations, etc.).
+
+Les étudiants de cette filière sont majoritairement issus des classes préparatoires BCPST, mais certains viennent de cursus universitaires et d’autres sont extérieurs à l’ENS. Il s’agit donc, d’une part, de proposer aux étudiants les plus à l’aise un cours suffisamment roboratif (et formel) pour renforcer leur bagage mathématique et, d’autre part, de rassurer ceux dont le bagage est moins substantiel qu’ils peuvent néanmoins s’approprier des notions dont ils constateront l'utilité dans la suite de leur parcours. Dans tous les cas, il s’agit de leur donner les moyens d’une plus grande autonomie scientifique pour la suite de leurs recherches.
+
+%---------------------------------------------------------------------
+\paragraph{Modèles à variables latentes pour l'écologie (M2, 6 ECTS).}
+Le cours sur les modèles à variables latentes en écologie est proposé aux étudiants de l’ISUP et des masters 2 “Apprentissage et Algorithmes” et “Statistique”. Ce cours présente une série de modèles utilisés classiquement en écologie et évolution (modèles mixtes, modèles d’évolution de traits ou de séquences, modèles de Markov cachés, modèles de distribution jointe d’espèces, modèles de réseaux d’interactions) qui présentent tous la particularité de reposer sur des variables partiellement observées.
+
+L’organisation du cours s’articule autour de l’algorithme “Espérance-Maximisation” (EM), qui demande de caractériser la distribution conditionnelle des variables latentes sachant les observées. Cette étape peut être explicite (modèle de mélange, modèle mixtes gaussiens), ou menée à bien grâce à des formules de récurrences exacte (modèles de Markov cachés, modèles d’évolution) ou ne pas être possible. Dans ce dernier cas, je présente des méthodes d’approximation variationnelle, aujourd’hui effectivement utilisées en écologie statistique. J’insiste notamment sur les garanties statistiques que peuvent faire perdre ces approximations et sur les techniques permettant, si besoin, de les récupérer a posteriori.
+
+Ce cours est l’enseignement le plus proche de mes recherches, mais son objectif premier est d’amener les étudiants à être capable de concevoir un modèle statistique pertinent pour aider à répondre à une question biologique précise en tenant compte des spécificités des données disponibles. Ce cours a donné lieu à un livre en cours de publication, dont la version préliminaire est accessible aux étudiants (\url{scj-robin.github.io/notes/DGR25Draft.pdf}).
+
+Certains étudiants qui choisissent ce cours se destinent à une carrière académique quand d’autres sont en apprentissage en entreprise. En fonction de la composition de la classe, je fais varier chaque année le contenu du cours et spécialement la proportion de travaux dirigés, lors desquels ils peuvent mettre effectivement en œuvre les modèles et méthodes.
+
+%---------------------------------------------------------------------
+\paragraph{Inférence bayésienne et modèle markoviens (M2).}
+Le master EvoGEM (“Evolution of Genomes, Populations and Species: Data and Models” : \url{evogem.fr}) a été créé à la rentrée 2022. J’ai donc rejoint son équipe pédagogique pour mettre la dernière main à son organisation en arrivant à \SU. Ce M2 est proposé aux étudiants de toutes les universités de la région parisienne. Les cours y sont donnés en anglais et portent sur les grandes thématiques de la biologie évolutive, en insistant sur les aspects de modélisation. Il est organisé en grands modules intitulés respectivement Théorie et modèles en biologie évolutive, Modèles stochastiques en écologie et évolution, Génomes, populations, espèces, Génétique quantitative, Modélisation mathématique avancée pour la génétique évolutive et Approches phylogénétiques comparatives. Son recrutement est également inter-disciplinaire : les étudiants ont une formation initiale en biologie (majoritairement), mathématique ou informatique. L’année démarre donc par deux semaines de remise à niveau dans ces trois domaines.
+
+J’interviens dans ce master dans le modèle de remise à niveaux en mathématique pour introduire les méthodes d’inférence bayésiennes et dans le module “Modèles stochastiques en écologie et évolution” (dont je suis responsable) à propos de différents modèles markoviens (processus de naissances et morts, processus de Galton-Watson). L’introduction des chaînes de Markov me permet ensuite de revenir présenter les méthodes de Monte Carlo par chaîne de Markov (MCMC), extrêmement utilisées en inférence bayésienne. J'y présente enfin différentes méthodes d'analyse multivariée utilisées, notamment en génétique des populations dans le module “Modélisation mathématique avancée pour la génétique évolutive”. Là encore mon expérience de recherche me permet de motiver et d’illustrer ces différents enseignements.
+
+La nature interdisciplinaire du recrutement de ce master induit une hétérogénéité des compétences des étudiants, qui fait aussi sa richesse. Il est donc nécessaire d’adapter la présentation des notions à cette hétérogénéité. La petite taille des promotions (entre 10 et 15 étudiants) permet néanmoins de laisser se développer les interactions entre eux, ce qui peut faciliter l’appropriation des notions dans le domaine qui leur sont le moins familiers.
+
+%---------------------------------------------------------------------
+\subsection{Responsabilités pédagogiques}
+%---------------------------------------------------------------------
+% , en particulier direction, animation, montage de formations, notamment à l’international, fabrication et utilisation de ressources pédagogiques, soutien à l’orientation, soutien à la promotion sociale et à l'insertion professionnelle, soutien à l'entrepreneuriat, etc. 
+
+%---------------------------------------------------------------------
+\paragraph{Responsabilité d'enseignement.}
+Ma principale (co-)responsabilité formelle à \SU est celle de l'UE de L1 de Sciences des Données qui est suivie par un peu plus de 300 étudiants chaque année. Cette responsabilité porte notamment sur la conception et la mise à jour des supports de cours et des feuilles de TD, ainsi que sur la création des sujets d’examens.
+Je suis par ailleurs responsable des trois modules d’enseignement que j’ai décrits précédemment : j’en organise l’emploi du temps (et, pour certains, assure la réservation des salles) et j’assure l’organisation des examens.
+
+%---------------------------------------------------------------------
+\paragraph{Montage de formations.}
+Au niveau de la licence, ma principale contribution est certainement la création du cours de L1 de Sciences des Données que j’ai décrite plus haut. La création de cette UE a initié la mise en place par l'UFR de Mathématiques d’une filière (suite d'enseignements optionnels) de Sciences de Données allant de la L1 à la L3. La première génération ayant suivi l’ensemble d’un parcours de de Sciences des Données allant de la L1 au M2 a organisé une conférence intitulée “Métiers en Data Science” à \SU en décembre 2025, qui a réuni plus d’une centaine d’étudiants et lors de laquelle j’ai été invité à intervenir.
+
+J’ai également participé à la conception du programme de la mineure de Science des Données proposée à partir de la L2 aux étudiants hors UFR de Mathématiques et d’Informatique. Ces options s’adressent à la fraction (non majoritaire, mais loin d’être nulle) d’étudiants suivant des cursus non math-info qui souhaitent mieux s’approprier des outils de statistique, d’apprentissage ou de programmation qu’ils auront assurément à utiliser par la suite.
+
+Au niveau licence, j’ai aussi participé à la refonte du cours de mathématiques de L1 commun à tous les portails. Ce travail a notamment abouti à la création d’un test de niveau à l’entrée à \SU afin de répartir les étudiants dans des groupes correspondant au mieux à leurs connaissances et à leurs attentes. J’ai animé les réflexions du groupe en charge du niveau intermédiaire dont la mission était d’adapter le programme et le support de cours à ces étudiants. Nous avons ainsi choisi de conserver le caractère formel de la présentation des concepts, mais en accompagnant chaque chapitre d’un exemple illustratif (issu de la chimie, de la physique ou de la biologie) qui nécessite le recours aux outils mathématiques présentés dans le chapitre. J’ai également analysé avec B. Rousset les résultats des premiers tests de niveau effectués à l’entrée de \SU et défini avec lui une règle permettant de proposer une première répartition des étudiants dans les différents groupes.
+
+Je n’interviens cependant ni dans le cours de mathématiques de L1, ni dans la mineure de Sciences de Données de L2 et L3.
+
+Au niveau master, j’ai participé en 2012 à la conception et à la création du M2 MathSV (“Mathématiques pour les Sciences du Vivant”\footnote{\url{www.universite-paris-saclay.fr/formation/master/mathematiques-et-applications/m2-mathematiques-pour-les-sciences-du-vivant}}) de l’université Paris-Saclay, dont j’étais le responsable pour \APT, et qui continue de former chaque année de jeunes chercheuses et chercheurs en mathématiques appliquées intéressés par les sciences du vivant, qui se destinent majoritairement (et le plus souvent avec succès) à des carrières académiques. Lors de la conception de ce master, nous avions veillé à leur fournir des bases solides en modélisation déterministe et en modélisation aléatoire, en évitant ainsi la séparation existant dans la plupart des masters de mathématiques appliquées. Là encore, cette large palette de compétences en mathématiques appliquées doit leur donner à des étudiants se destinant à la recherche une plus grande autonomie scientifique dans leurs interactions avec les sciences du vivant.
+
+Dès la rentrée 2021, j'ai également participé à la mise en place du M2 EvoGEM qui s'est ouvert à la rentrée 2022 et dans lequel je suis responsable du module “Modèles stochastiques en écologie et évolution”. Les modèles mathématiques mobilisés en écologie et évolution sont souvent sophistiqués (modèles de Wright-Fisher, processus de naissance et morts, coalescent) et leur présentation sous une forme à la fois précise et accessible, spécialement aux étudiants issus de formation en biologie, est l’enjeu principal de ces enseignements.
+
+%---------------------------------------------------------------------
+\paragraph{Ressources pédagogiques.}
+Mes enseignements sont tous accompagnés de supports. Certains sont disponibles via le moodle de l’université : pour le cours de L1 de Sciences des données (\url{moodle-sciences-25.sorbonne-universite.fr/course/section.php?id=10325}) ou celui sur l’inférence bayésienne du M2 EvoGEM (\url{moodle-sciences-25.sorbonne-universite.fr/mod/folder/view.php?id=63305}). 
+
+Je maintiens une page spécifiquement dédiée au cours de M2 sur les modèles à variables latentes en écologie (\url{scj-robin.github.io/cours-modeles-stat-ecologie.html}), depuis laquelle est accessible un projet de livre.
+
+J’ai également co-rédigé deux ouvrages sur la statistique inférentielle \cite{DRV99} et sur le modèle linéaire et ses généralisations \cite{DBE15}.
+
+%---------------------------------------------------------------------
+\paragraph{Ecoles chercheurs.}
+Je contribue également à la diffusion du savoir au travers d’écoles chercheurs. Je participe ainsi depuis trois ans à la formation EcoNet proposée par le Centre de synthèse et d’analyse sur la biodiversité (CESAB, Montpellier). Cette formation porte sur les modèles et méthodes d’analyse de réseaux écologiques et résultent de l’ANR EcoNet, portée par C. Matias de 2017 à 2022.
+
+% %---------------------------------------------------------------------
+% \subsection{Diffusion de la culture} % (humaniste)}
+% %---------------------------------------------------------------------
+% % à travers le développement des sciences humaines et sociales et/ou de la culture scientifique, technique et industrielle, participation à des expositions, etc.
+
+% %---------------------------------------------------------------------
+% \subsection{Rayonnement et activités internationales}
+% %---------------------------------------------------------------------
+% % dont la participation à la construction de l’espace européen de l’enseignement supérieur et de la recherche, la coopération internationale, etc. 

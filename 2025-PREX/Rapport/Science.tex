@@ -1,0 +1,132 @@
+%---------------------------------------------------------------------
+\subsection{Présentation synthétique des thématiques de recherche}
+%---------------------------------------------------------------------
+% : grands axes de recherche et apport dans le ou les domaines concernés
+
+Depuis le début de ma carrière, mes recherches se situent à l'interface entre les mathématiques (principalement les statistiques et les probabilités) et les sciences de la vie. La quasi-totalité de mes travaux méthodologiques ou théoriques sont motivés, de près ou de loin, par la biologie au sens large. 
+
+Après avoir rédigé une thèse sur des tests non paramétriques utilisés en statistique médicale, je me suis rapidement intéressé aux applications en génomique, en particulier aux modèles markoviens permettant de décrire la distribution des motifs d'intérêt le long du génome. Le livre \cite{RRS06} synthétise une bonne part de ces travaux (objet de mon HDR). De 1999 à 2001, j'ai été détaché par \APT auprès de l'INRAE de Jouy-en-Josas, et j'ai ainsi participé à la création de l'unité Mathématiques, Informatique et Génome (MIG), qui réunissait des chercheurs en biologie moléculaire, en physique (autour de la structure des protéines), en informatique (notamment autour des bases de données) et en statistique et mathématiques. 
+
+Depuis une dizaine d’années, je me suis tourné vers les applications en écologie et j'ai demandé à être mis à disposition du Centre d'Écologie et des Sciences de la Conservation (CESCO) du Muséum National d'Histoire Naturelle entre 2020 et 2021. Ce séjour m’a permis de m’imprégner des grandes problématiques en écologie des communautés ou en écologie de la conservation. Ce séjour de 18 mois a malheureusement été marqué par presque de 10 mois de confinement.
+
+Les applications en biologie moléculaire m’ont amené à m’intéresser à trois thèmes généraux qui alimentent encore aujourd'hui mes recherches : 
+\begin{itemize} 
+\item les modèles à variables latentes (par exemple pour modéliser l’hétérogénéité du transcriptome), 
+\item la détection des ruptures dans un signal (pour localiser des altérations dans le génome de cellules cancéreuses) et 
+\item les modèles de réseaux (pour décrire l’organisation des interactions entre gènes ou protéines).
+\end{itemize} 
+Ces trois familles de modèles posent chacune des problèmes d’inférence statistique particuliers. Typiquement l’évaluation ou la maximisation de leur vraisemblance n’est pas faisable par des techniques classiques. Les difficultés peuvent être d'ordre analytique (impossibilité d’évaluer une intégrale particulière) ou combinatoire (impossibilité d’explorer systématiquement un espace de grande dimension). Il s’agit, pour chacun d’entre eux, de proposer des méthodes alternatives efficaces d’un point de vue computationnel et assorties de garanties statistiques. Dans ces travaux, je privilégie le plus souvent les méthodes déterministes aux approches stochastiques, principalement pour des raisons de temps de calcul. Les publications que je présente à la section suivante illustrent quelques-unes de ces problématiques.
+
+\bigskip
+En me tournant vers l’écologie, j’ai découvert l’immensité de ce champ disciplinaire dans lequel une culture statistique et une tradition de modélisation aléatoire sont bien installées. Par chance, ou du fait de leur caractère générique, les problématiques décrites plus haut (variables latentes, ruptures, réseaux) se retrouvent en écologie : les modèles à variables latentes fournissent un cadre générique pour la modélisation de distributions jointes d’espèces, les méthodes de détection de ruptures peuvent aider à l’analyse de comportements animaux et des modèles spécifiques sont nécessaires pour comprendre l’organisation des réseaux plantes-pollinisateurs. 
+
+Pour alimenter ces travaux, j’entretiens des relations aussi étroites que possible avec les instituts de recherche en écologie liés à \SU. Je co-encadre la thèse de B. Liu avec E. Thébault de l’IEES. J’ai également encadré la thèse de T. Le Minh avec F. Massol de l’IEES et nous prévoyons d’en co-encadrer une nouvelle cette année ou la suivante. Par ailleurs, je co-encadre actuellement avec E. Porcher et C. Fontaine(CESCO, MNHN) le post-doc de Lena Klay sur l’inférence causale appliquée au lien entre usage de pesticides et biodiversité. 
+
+\bigskip
+Mon arrivée au LPSM m’a permis de nouer de nouvelles collaborations autour de thématiques qui m’occupaient déjà. Je travaille ainsi sur des modèles de graphes échangeables avec A. Ben-Hamou qui font suite aux travaux de thèse de T. Le Minh. 
+
+Elle m’a aussi permis de m'intéresser à de nouveaux objets comme les processus Hawkes dont les applications en sciences du vivant sont légions, car ils permettent de décrire des phénomènes d’auto-excitation dans la survenue d’événements ponctuels. Avec C. Dion-Blanc, je m’intéresse à des méthodes efficaces de segmentation dans la trajectoire de processus pontuels, dont les processus de Hawkes \cite{DHL24}., Je travaille aussi avec A. Bonnet sur une version du processus de Hawkes à temps discret dont le régime varie au cours du temps selon un régime markovien \cite{BoR25}.
+
+Parallèlement, A. Godichon m’a initié à l’intérêt des algorithmes de gradient stochastique en statistique robuste. Ces approches donnent accès à des estimateurs consistants de quantités robustes alternatives aux traditionnelles moyennes et variances. Avec A. Godichon et L. Sansonnet, nous nous employons à revisiter différentes méthodes classiques de statistiques multivariées (régression, analyse en composante principale, analyse discriminante, modèles de mélange gaussien, etc.) \cite{GoR24,GRS26,GGR26}.
+
+Enfin, avec A. Ben-Hamou et des collègues du CQSB de \SU, nous avons obtenu un financement de 65 k\euro\xspace de l’initiative InLife pour un projet autour de la modélisation et de la dissection expérimentale des processus de mutation dynamique au cours de l'expansion clonale. Ce projet porte notamment sur l’étude d’une version multivariée du modèle de Luria-Delbrück.
+
+%---------------------------------------------------------------------
+\subsection{Publications et productions scientifiques}
+%---------------------------------------------------------------------
+% présentation, en quelques lignes, des 5 publications (ou brevets, logiciels, compte rendus, rapports) jugées les plus significatives (Liste complète en annexe 2 sans transmission des documents)
+
+Mes publications se répartissent, à part inégales et variables au cours du temps, entre des revues de statistique ou de probabilités appliquées, des revues d’interfaces (bioinformatique, biostatistique, écologie statistique) et, moins souvent, des revues de sciences du vivant (biologie moléculaire, écologie, évolution).
+
+\begin{description}
+  \item[\cite{MRV10} {\sl Annals of Applied Statistics, 2010}.] 
+  Cet article, qui fait suite au stage de M2 de M. Mariadassou, généralise l’étude de l’inférence des modèles à blocs stochastiques (SBM, déjà étudiés dans \cite{DPR08}). Le SBM est devenu un modèle de référence pour analyser la structure d’un réseau d’interaction. Il fait l’hypothèse que les entités appartiennent à des groupes et que cette appartenance organise leurs interactions. La structure de dépendance induite par cette hypothèse interdit le recours à des approches classiques comme l’algorithme EM pour son inférence. La technique d'inférence proposée repose sur une approximation variationnelle.
+  %
+  \item[\cite{BMR17} {\sl Journal of the Royal Statistical Society (B), 2017}.]
+  Ce premier article de la thèse de P. Bastide présente un modèle d’évolution d’un trait quantitatif, évolution qui peut présenter des discontinuités qui peuvent être interprétées comme des sauts adaptatifs. Le cadre sous-jacent est celui d’un mouvement brownien (ou un processus d’Ornstein-\"Uhlenbeck) branchant. Son inférence pose un problème de détection de ruptures le long des branches d’un arbre, dont on montre qu’il se résout par un simple tri de valeurs bien choisies évaluées en chaque nœud de l’arbre. Une version multivariée de ce modèle est étudiée dans \cite{BAR18}.
+  %
+  \item[\cite{ScR17} {\sl Statistics and Computing 2017}.] 
+  Il s’agit ici de détecter des ruptures dans la structure de dépendance d’un processus multivarié. Une application typique est le changement des interactions neuronales lors d’un changement de tâche. La difficulté est ici combinatoire du fait de la taille de l’espace à explorer (nombre de segmentations d’une suite de $n$ temps et nombre de graphes possibles liant $p$ nœuds). L’article montre que l’utilisation conjointe de propriétés algébriques des structures sous-jacente et de conjugaison des lois qui les gouvernent permet de mener à bien une inférence Bayésienne exacte, au sens où la loi conditionnelle des quantités d’intérêt peut être évaluée sans aucune approximation déterministe ou stochastique. Cet article est issu de la thèse de L. Schwaller.
+  %
+  \item[\cite{CMR21} {\sl Frontiers in Ecology and Evolution, 2021}.] 
+  Cet article écrit à destination d’un public d’écologues présente le modèle Poisson log-normal comme un modèle de distribution jointe d’espèces (c’est-à-dire décrivant les effets conjoints de l’environnement et des interactions inter-spécifiques sur les abondances d’espèces vivant dans un même milieu). Il s’appuie sur des travaux précédents \cite{CMR18a,CMR19} et montre les possibilités qu’offre cette famille de modèles pour définir une typologie de milieux, inférer un réseau d’interaction entre espèces, ou simplement visualiser des observations recueillies sur des centaines, voire des milliers d’espèces. L’inférence de ces modèles repose là encore sur une approximation variationnelle.
+  Avec J. Stoehr \cite{StR26}, nous avons proposé de compléter l’approche variationnelle par une étape d’inférence fondée sur une vraisemblance composite, afin de recouvrir des propriétés statistiques que l’approximation variationnelle seule ne permet pas de garantir.
+  %
+  \item[\cite{LDM25} {\sl Electronic Journal of Statistics, 2025}.] 
+  Les graphes aléatoires bipartites constituent une représentation mathématique naturelle des réseaux d'interaction entre plantes et pollinisateurs (ou entre plantes et herbivores, ou hôtes et parasites). La description et la compréhension de la structure de ces réseaux est un sujet actuellement très actif en écologie statistique. Cet article, issu de la thèse de T. Le Minh, s'intéresse à des descripteurs qui prennent la forme de $U$-statistiques. On y donne les conditions de leur normalité asymptotique et on y propose un estimateur consistant de leur variance asymptotique. L'approche proposée est notamment différente de celle adoptée dans \cite{OLR22} pour l'étude de motifs dans des réseaux du même type.
+  %
+%   \item[\cite{BoR25} {\sl ArXiv, 2025}.] 
+%   Cet article est motivé par la modélisation du comportement de chauve-souris en se fondant sur différents régimes d’émission de leurs cris. Les processus de Hawkes permettent de prendre en compte le caractère auto-excitant des cris, mais sa mémoire infinie empêche de le faire entrer des modèles de Markov cachés. Nous montrons que le processus observé peut être augmenté d’une fonction déterministe de son passé pour retrouver un caractère markovien. L’inférence d’un modèle prévoyant des changements peut alors être menée au moyen de techniques déjà bien maîtrisées.
+\end{description}
+
+%---------------------------------------------------------------------
+\subsection{Encadrement doctoral et scientifique}
+%---------------------------------------------------------------------
+% (Liste complète en annexe 3)
+
+À ce jour, j'ai (co-)encadré les travaux de 5 doctorantes et 11 doctorants dont je précise la liste en section \ref{app:phdencours}. Je co-encadre actuellement la thèse de deux étudiantes (B. Bricout et B. Liu) et d'un étudiant (P. Guillot). Ces thèses sont, pour la plupart, motivées par des applications en sciences du vivant. Certaines sont très liées à une application particulière alors que d’autres s'intéressent à des questions plus génériques et sont de nature plus théorique.
+
+Comme cette liste le montre, ces encadrements sont le plus souvent des co-encadrements. Cette organisation est nécessaire pour les thèses interdisciplinaires qui demandent à être encadrées par des compétences complémentaires. Cette organisation a aussi souvent fourni à des collègues plus jeunes d’avoir une première expérience d’encadrement (sans que je sois jamais un simple prête-nom). 
+
+Parmi ces anciens étudiants, une grande majorité s’est orientée vers une carrière académique : un est actuellement en post-doc, un poursuit une carrière artistique, trois travaillent dans l’industrie, deux sont ingénieurs de recherche (INRAE, Institut Pasteur), quatre enseignent à l’université (PRAG, MdC, PR) et cinq sont chercheurs (CR ou DR à l’INRAE, au CIRAD ou au CNRS). 
+
+%---------------------------------------------------------------------
+\subsection{Diffusion et rayonnement}
+%---------------------------------------------------------------------
+
+% %---------------------------------------------------------------------
+% \paragraph{Développement de l’innovation et du transfert de technologie}
+
+% %---------------------------------------------------------------------
+% \paragraph{Expertise et appui à des organismes nationaux}
+% % (dont associations et fondations reconnues d’utilité publique) ou internationaux
+
+% %---------------------------------------------------------------------
+% \paragraph{Expertise et appui aux politiques publiques}
+% % menées pour répondre aux défis sociétaux, aux besoins sociaux, économiques et de développement durable
+
+%---------------------------------------------------------------------
+\paragraph{Activités éditoriales.}
+% (expertises, responsabilités de collections...)
+En plus  d'une activité régulière de relecture d'articles pour des revues ou
+des conférences internationales, j'ai été éditeur associé de la Revue Française de Statistique, de {\sl Biometrics}, de {\sl BMC Bioinformatics} et du {\sl Scandinavian Journal of Statistics}. 
+
+%---------------------------------------------------------------------
+\paragraph{Participation à des jurys de thèse et d’HDR (hors établissement)}
+Depuis 2021, j'ai été relecteur de six thèses et j'ai de plus participé à deux jurys, dont un en tant que président. Durant la même période, j'ai été rapporteur de deux mémoires d'HDR et j'ai été de plus membre de sept jurys, dont deux en tant que président. Dans les même temps j'ai présidé les jurys de soutenance de quatre thèses et d'autant de HDR à \SU.
+
+%---------------------------------------------------------------------
+\paragraph{Diffusion du savoir}
+% (vulgarisation), responsabilités et activités au sein de sociétés savantes ou associations
+J'ai été secrétaire général de la Société Française de Statistique pendant un mandat de trois (de 2018 à 2012). J'ai également rédigé deux livres d'enseignement de la statistique \cite{DRV99,DBE15} et un livre sur des modèles markoviens utilisés en génomique \cite{RRS06} (version française : \cite{RRS03}). Un livre sur les modèles à variables latente en écologie est en cours de finalisation et accessible sur ma page personnelle (\url{scj-robin.github.io/notes/DGR25Draft.pdf}).
+
+%---------------------------------------------------------------------
+\paragraph{Organisation de colloques, conférences, journées d'étude}
+Au tournant des année 2010, j'ai cofondé la conférence “Statistical Methods for Post Genomic Data” (\url{smpgd.fr/}), qui rassemble encore chaque année une centaine de chercheurs, principalement européens, pour discuter des questions liées aux derniers développements en biologie moléculaire. Je ne contribue plus à cette conférence. J'ai également organisé deux Ateliers INSERM, l’un sur l'analyse des puces à ADN ("microarrays") et l'autre sur les tests multiples. Je participe également une école chercheur récurrente sur l’analyse des réseaux écologiques décrite à la fin de la section \ref{sec:ens}. 
+
+
+%---------------------------------------------------------------------
+\paragraph{Participation à un réseau de recherche, invitations dans des universités étrangères...}
+J'ai été professeur invité au département de statistique l'université de Stanford pendant deux mois à l'été 2016.
+
+%---------------------------------------------------------------------
+\subsection{Responsabilités scientifiques}
+%---------------------------------------------------------------------
+
+%---------------------------------------------------------------------
+\paragraph{Animation d’équipes de recherche.}
+% (préciser le rôle, la taille, la composition, le budget, les dates)
+J’ai été responsable de l’équipe \SG de l’\UMRlong de 2002 à 2013. Pendant cette période, la taille de cette équipe a varié de 5 à 15 membres (permanents + doctorants). Il s'agissait alors d'une responsabilité essentiellement scientifique, visant à animer les recherches d'une équipe homogène travaillant collectivement sur quelques sujets bien identifiés.
+
+%---------------------------------------------------------------------
+\paragraph{Contrats de recherche.}
+% évalués dans le cadre d’un appel à projet ou de gré à gré (préciser l'organisme/partenaire, les dates, le rôle, les ressources financières et humaines)
+Depuis le début de ma carrière, j’ai été associé à de nombreux projets de recherche, de type  ANR en étant le plus souvent responsable de {\sl work-package}. Je ne les liste pas ici. J’ai notamment porté l’ANR NeMo ({\sl Network motif}, de 2009 à 2012) sur l’analyse de réseaux biologiques qui réunissait 12 permanents répartis en trois partenaires (\UMRcourt, l’unité Statistique et Génome de l’université d’Évry et le Laboratoire de Biométrie et Biologie Évolutive de l’Université Claude Bernard, Lyon) pour un budget de 400 k\euro.
+
+Je suis actuellement impliqué dans le projet EcoControl, soutenu par le PEPR MathVives, dans le cadre duquel une thèse sera prochainement financée en collaboration entre le LPSM et l’Institut d'écologie et des sciences de l'environnement (IEES) de \SU. Le budget global du projet est de 3 M\euro\xspace sur une durée de quatre ans.
+
+Je suis également co-responsable du pôle transversal “Statistiques et IA” du PEPR DynaBioD dont le budget total est de 45 M\euro\xspace sur une durée de huit ans. La répartition exacte entre les quatre projets ciblés et les cinq pôles transversaux qui le constituent n'est pas encore complètement arrêtée.
+
+% %---------------------------------------------------------------------
+% \paragraph{Autres.}
+
